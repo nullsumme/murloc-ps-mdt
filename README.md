@@ -9,6 +9,8 @@ Start at [the documentation index](docs/nilname/README.md), then read the linked
 Markdown files directly. Search locally with `rg -n "GeneratePath" docs/nilname -g '*.md'`.
 Each page records its original source URL. `AGENTS.md` points future agents to
 this snapshot automatically. Reading the saved docs needs no browser or network.
+Pages use named files within topic folders, for example
+`docs/nilname/LuaAPI/Movement/GeneratePath.md`.
 
 ## Refresh the documentation
 

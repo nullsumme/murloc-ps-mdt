@@ -12,7 +12,10 @@ test('keeps docs links, deduplicates anchors and excludes external resources', (
 
 test('output paths stay relative and encode Windows-special characters', () => {
   assert.equal(pagePath('https://docs.nilname.com/'), 'index');
-  assert.equal(pagePath('https://docs.nilname.com/API/CON/'), 'p-API/p-CON/index');
+  assert.equal(pagePath('https://docs.nilname.com/API/CON/'), 'API/%43ON');
+  assert.equal(pagePath('https://docs.nilname.com/LuaAPI/Movement/GeneratePath/'), 'LuaAPI/Movement/GeneratePath');
+  assert.notEqual(pagePath('https://docs.nilname.com/index/'), 'index');
+  assert.notEqual(pagePath('https://docs.nilname.com/README/').toLowerCase(), 'readme');
   const path = pagePath('https://docs.nilname.com/a%2Fb/evil:name/');
   assert.ok(!path.includes(':'));
   assert.ok(!path.includes('..'));

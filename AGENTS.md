@@ -4,7 +4,7 @@ The Nil-Name documentation is checked into `docs/nilname/` as Markdown so it can
 be read and searched locally in every session.
 
 - Start with `docs/nilname/README.md` for the full page index.
-- Read `docs/nilname/p-Home/p-LuaAPISummary/index.md` for the API overview.
+- Read `docs/nilname/Home/LuaAPISummary.md` for the API overview.
 - Search with `rg -n "<symbol or topic>" docs/nilname -g '*.md'`, then read the
   matching pages before implementing code against the Nil-Name API.
 - Each page includes its source URL. The JSON manifest records crawl coverage

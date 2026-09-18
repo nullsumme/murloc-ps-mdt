@@ -18,7 +18,7 @@
       "url": "https://docs.nilname.com/API/Crypto/",
       "finalUrl": "https://docs.nilname.com/API/Crypto/",
       "title": "🔐 Cryptography",
-      "path": "p-API/p-Crypto/index",
+      "path": "API/Crypto",
       "sha256": "c8c6de2e1b69bf3c0ed1daa5c5020eb2f1ca3c445b769eae90b5b9891032eb76",
       "images": []
     },
@@ -26,7 +26,7 @@
       "url": "https://docs.nilname.com/API/FileSystem/",
       "finalUrl": "https://docs.nilname.com/API/FileSystem/",
       "title": "📂 FileSystem",
-      "path": "p-API/p-FileSystem/index",
+      "path": "API/FileSystem",
       "sha256": "689ed6f5304cf435583a96f2694f37f9c8189053ebca3c97e58853e98ae5bf26",
       "images": []
     },
@@ -34,7 +34,7 @@
       "url": "https://docs.nilname.com/API/Guidelines/",
       "finalUrl": "https://docs.nilname.com/API/Guidelines/",
       "title": "ℹ️ Guidelines",
-      "path": "p-API/p-Guidelines/index",
+      "path": "API/Guidelines",
       "sha256": "5a148c7d334ccc6ee5d85b7dd3fdd2004519da5180a332cf8cc8350d79e40f47",
       "images": []
     },
@@ -42,7 +42,7 @@
       "url": "https://docs.nilname.com/API/Objects/",
       "finalUrl": "https://docs.nilname.com/API/Objects/",
       "title": "Objects",
-      "path": "p-API/p-Objects/index",
+      "path": "API/Objects",
       "sha256": "4f25b3ba0f7417027e1ba8e8717d7b088f51944e50a1022e71f48a230cf0a9d2",
       "images": []
     },
@@ -50,7 +50,7 @@
       "url": "https://docs.nilname.com/API/Scripts/",
       "finalUrl": "https://docs.nilname.com/API/Scripts/",
       "title": "📜 Scripts",
-      "path": "p-API/p-Scripts/index",
+      "path": "API/Scripts",
       "sha256": "be190f930b68a631a45232c1cebe966827a56e026655b0bcf06d98d78abe89c4",
       "images": []
     },
@@ -58,7 +58,7 @@
       "url": "https://docs.nilname.com/Blog/Alternative_cryptocurrency_to_Bitcoin/",
       "finalUrl": "https://docs.nilname.com/Blog/Alternative_cryptocurrency_to_Bitcoin/",
       "title": "Alternative cryptocurrency to Bitcoin",
-      "path": "p-Blog/p-Alternative_cryptocurrency_to_Bitcoin/index",
+      "path": "Blog/Alternative_cryptocurrency_to_Bitcoin",
       "sha256": "f0cd0348a49d8a0430f488d889a51c14354df54569183ae3fb6509e3b0dedb98",
       "images": []
     },
@@ -66,7 +66,7 @@
       "url": "https://docs.nilname.com/Blog/Binance_is_a_scam_change_my_mind/",
       "finalUrl": "https://docs.nilname.com/Blog/Binance_is_a_scam_change_my_mind/",
       "title": "Binance is a scam: change my mind",
-      "path": "p-Blog/p-Binance_is_a_scam_change_my_mind/index",
+      "path": "Blog/Binance_is_a_scam_change_my_mind",
       "sha256": "54c880f2227a5988ee1e0121b0002a7071eecb1c82bcae5518b6e0a2c68e8db8",
       "images": []
     },
@@ -74,7 +74,7 @@
       "url": "https://docs.nilname.com/Blog/Exploring_DeFi/",
       "finalUrl": "https://docs.nilname.com/Blog/Exploring_DeFi/",
       "title": "Exploring DeFi: A Beginner's Guide Through My Crypto Journey",
-      "path": "p-Blog/p-Exploring_DeFi/index",
+      "path": "Blog/Exploring_DeFi",
       "sha256": "a5ae57422a0d672ffd76ad9ba029431936820a444903703241f966966ba77d13",
       "images": []
     },
@@ -82,7 +82,7 @@
       "url": "https://docs.nilname.com/Blog/FaQ/",
       "finalUrl": "https://docs.nilname.com/Blog/FaQ/",
       "title": "FaQ",
-      "path": "p-Blog/p-FaQ/index",
+      "path": "Blog/FaQ",
       "sha256": "fbc1382f3dda371c1b667333058bc5a7b4990967e5ada344df8f70e18e287c7f",
       "images": []
     },
@@ -90,7 +90,7 @@
       "url": "https://docs.nilname.com/Blog/How_to_obtain_makebelieve_money/",
       "finalUrl": "https://docs.nilname.com/Blog/How_to_obtain_makebelieve_money/",
       "title": "How to obtain makebelieve money",
-      "path": "p-Blog/p-How_to_obtain_makebelieve_money/index",
+      "path": "Blog/How_to_obtain_makebelieve_money",
       "sha256": "d64b622d54e803913d3d9ee1304c98819d8ad364989843308a05df8939612827",
       "images": []
     },
@@ -98,7 +98,7 @@
       "url": "https://docs.nilname.com/Blog/How_to_remain_pseudo-anonymous/",
       "finalUrl": "https://docs.nilname.com/Blog/How_to_remain_pseudo-anonymous/",
       "title": "How to remain pseudo-anonymous",
-      "path": "p-Blog/p-How_to_remain_pseudo-anonymous/index",
+      "path": "Blog/How_to_remain_pseudo-anonymous",
       "sha256": "252103bdd3db0d2ff0ad65079b6b7a09e8db744bd8ea909f3094e647c74aba8b",
       "images": []
     },
@@ -106,7 +106,7 @@
       "url": "https://docs.nilname.com/Blog/How_to_setup_NilName/",
       "finalUrl": "https://docs.nilname.com/Blog/How_to_setup_NilName/",
       "title": "How to use NilName",
-      "path": "p-Blog/p-How_to_setup_NilName/index",
+      "path": "Blog/How_to_setup_NilName",
       "sha256": "e66e5ea0002be708acaf3ec9db6081787e09d664c26ceadad23afd83a7229034",
       "images": []
     },
@@ -114,7 +114,7 @@
       "url": "https://docs.nilname.com/Blog/Oh_shit_you_fucked_the_payment/",
       "finalUrl": "https://docs.nilname.com/Blog/Oh_shit_you_fucked_the_payment/",
       "title": "Oh shit, you ****ed the payment!",
-      "path": "p-Blog/p-Oh_shit_you_fucked_the_payment/index",
+      "path": "Blog/Oh_shit_you_fucked_the_payment",
       "sha256": "51f6ba5f4d16edf419606bd63c52169132c578894b41ec82039bb32941f45b99",
       "images": [
         "https://docs.nilname.com/assets/bika_meme_a.png",
@@ -125,7 +125,7 @@
       "url": "https://docs.nilname.com/Blog/The_best_of_Nn_Basic/",
       "finalUrl": "https://docs.nilname.com/Blog/The_best_of_Nn_Basic/",
       "title": "The Best of Nn Basic",
-      "path": "p-Blog/p-The_best_of_Nn_Basic/index",
+      "path": "Blog/The_best_of_Nn_Basic",
       "sha256": "2e206a62503aa68f6a97c481218c450be20e6218ebe018a6db9aadee9d41cdc1",
       "images": [
         "https://docs.nilname.com/assets/pv_smart.png"
@@ -135,7 +135,7 @@
       "url": "https://docs.nilname.com/Home/Getting_started_as_a_developer/",
       "finalUrl": "https://docs.nilname.com/Home/Getting_started_as_a_developer/",
       "title": "My first NilName script",
-      "path": "p-Home/p-Getting_started_as_a_developer/index",
+      "path": "Home/Getting_started_as_a_developer",
       "sha256": "a2fa8e1f443464ca356ed48ba4a8b53bae9d9f1500a612e74a1eea11a2e8ec19",
       "images": []
     },
@@ -143,7 +143,7 @@
       "url": "https://docs.nilname.com/Home/LuaAPISummary/",
       "finalUrl": "https://docs.nilname.com/Home/LuaAPISummary/",
       "title": "API Summary",
-      "path": "p-Home/p-LuaAPISummary/index",
+      "path": "Home/LuaAPISummary",
       "sha256": "9d42e6300ffacb5a0859b81b94de18cadc08a0f0637983b48a17fbcf8db2b17f",
       "images": []
     },
@@ -151,7 +151,7 @@
       "url": "https://docs.nilname.com/LuaAPI/HTTP/HTTPGet/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/HTTP/HTTPGet/",
       "title": "HTTP:Get",
-      "path": "p-LuaAPI/p-HTTP/p-HTTPGet/index",
+      "path": "LuaAPI/HTTP/HTTPGet",
       "sha256": "8587e8b817ad5d7e7343f8df89d456e4ee6321878e62a473fff3323947202fbf",
       "images": []
     },
@@ -159,7 +159,7 @@
       "url": "https://docs.nilname.com/LuaAPI/HTTP/HTTPPost/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/HTTP/HTTPPost/",
       "title": "HTTP:Post",
-      "path": "p-LuaAPI/p-HTTP/p-HTTPPost/index",
+      "path": "LuaAPI/HTTP/HTTPPost",
       "sha256": "5b06d97f80e73f55d968cb34ae6b85a0b8f120cde9fc261857bdd0103f92c3c1",
       "images": []
     },
@@ -167,7 +167,7 @@
       "url": "https://docs.nilname.com/LuaAPI/HTTP/HTTPRequest/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/HTTP/HTTPRequest/",
       "title": "HTTP:Request",
-      "path": "p-LuaAPI/p-HTTP/p-HTTPRequest/index",
+      "path": "LuaAPI/HTTP/HTTPRequest",
       "sha256": "078761f250dcc04b48f9c2b1c08446fefcc169e80dac03479f3286d235335b97",
       "images": []
     },
@@ -175,7 +175,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetKeyState/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetKeyState/",
       "title": "GetKeyState",
-      "path": "p-LuaAPI/p-Miscellaneous/p-GetKeyState/index",
+      "path": "LuaAPI/Miscellaneous/GetKeyState",
       "sha256": "52ab84fd260e2edc21efa828e4d932bdc54f390c9abc9ce96bf5a4f58b0138ba",
       "images": []
     },
@@ -183,7 +183,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetSessionId/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetSessionId/",
       "title": "GetSessionId",
-      "path": "p-LuaAPI/p-Miscellaneous/p-GetSessionId/index",
+      "path": "LuaAPI/Miscellaneous/GetSessionId",
       "sha256": "ec778795cb70a234902ac07276e698180e5543cf46ff6d1b34e68751479d1395",
       "images": []
     },
@@ -191,7 +191,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetSessionIndex/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetSessionIndex/",
       "title": "GetSessionIndex",
-      "path": "p-LuaAPI/p-Miscellaneous/p-GetSessionIndex/index",
+      "path": "LuaAPI/Miscellaneous/GetSessionIndex",
       "sha256": "72bc862b587b0eb352ca517c26de29480e68cd00a6ad14745bd71ca7a201fbc5",
       "images": []
     },
@@ -199,7 +199,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetWowAccount/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Miscellaneous/GetWowAccount/",
       "title": "GetWowAccount",
-      "path": "p-LuaAPI/p-Miscellaneous/p-GetWowAccount/index",
+      "path": "LuaAPI/Miscellaneous/GetWowAccount",
       "sha256": "be352ac9ca9e44b51ba27a99be0c6cd72297dd4809af62e3960b9a1b40683c36",
       "images": []
     },
@@ -207,7 +207,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Miscellaneous/SetNavHost/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Miscellaneous/SetNavHost/",
       "title": "SetNavHost",
-      "path": "p-LuaAPI/p-Miscellaneous/p-SetNavHost/index",
+      "path": "LuaAPI/Miscellaneous/SetNavHost",
       "sha256": "80c90ed4ebb327465546088af094f309b8220fa27f3c9f13b91b71b5c611beec",
       "images": []
     },
@@ -215,7 +215,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/ClickPosition/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/ClickPosition/",
       "title": "ClickPosition",
-      "path": "p-LuaAPI/p-Movement/p-ClickPosition/index",
+      "path": "LuaAPI/Movement/ClickPosition",
       "sha256": "5a7d1577ff48a02a74d8acb8b6fa43e85572c9d94079ecd5a7def86f4fb0084a",
       "images": []
     },
@@ -223,7 +223,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/ClickToMove/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/ClickToMove/",
       "title": "ClickToMove",
-      "path": "p-LuaAPI/p-Movement/p-ClickToMove/index",
+      "path": "LuaAPI/Movement/ClickToMove",
       "sha256": "5dff77f2d26e70f6a11368dd26cd7a929a7897383f45452f384a149120790315",
       "images": []
     },
@@ -231,7 +231,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/GenerateLocalPath/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/GenerateLocalPath/",
       "title": "GenerateLocalPath",
-      "path": "p-LuaAPI/p-Movement/p-GenerateLocalPath/index",
+      "path": "LuaAPI/Movement/GenerateLocalPath",
       "sha256": "e5642ad86f46adb8c39dd1b157fea37ac3c1e94c514da11baeb0d920fe52a9d2",
       "images": []
     },
@@ -239,7 +239,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/GeneratePath/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/GeneratePath/",
       "title": "GeneratePath",
-      "path": "p-LuaAPI/p-Movement/p-GeneratePath/index",
+      "path": "LuaAPI/Movement/GeneratePath",
       "sha256": "194fdda9e62fadb93adc5010af31d5bd6b3340057be0b76c755ad70c58d8ca7b",
       "images": []
     },
@@ -247,7 +247,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/GetCameraPosition/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/GetCameraPosition/",
       "title": "GetCameraPosition",
-      "path": "p-LuaAPI/p-Movement/p-GetCameraPosition/index",
+      "path": "LuaAPI/Movement/GetCameraPosition",
       "sha256": "f1ce3b6270cbba6c33e533fa1a6a75c030a858adfd2964087cc98eaaaad6a11b",
       "images": []
     },
@@ -255,7 +255,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/GetCorpsePosition/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/GetCorpsePosition/",
       "title": "GetCorpsePosition",
-      "path": "p-LuaAPI/p-Movement/p-GetCorpsePosition/index",
+      "path": "LuaAPI/Movement/GetCorpsePosition",
       "sha256": "e993cb52033ebae0ed696624758d83bb9ced940c4582c6638b5897ef82c3a9cf",
       "images": []
     },
@@ -263,7 +263,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/GetPitch/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/GetPitch/",
       "title": "GetPitch",
-      "path": "p-LuaAPI/p-Movement/p-GetPitch/index",
+      "path": "LuaAPI/Movement/GetPitch",
       "sha256": "725de8c56250726b07e1b265a52eef8f4db14a7f830ae1b3bb92573e53a3d238",
       "images": []
     },
@@ -271,7 +271,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/LastTerrainClick/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/LastTerrainClick/",
       "title": "LastTerrainClick",
-      "path": "p-LuaAPI/p-Movement/p-LastTerrainClick/index",
+      "path": "LuaAPI/Movement/LastTerrainClick",
       "sha256": "389858e6ab16ea6765b78c57569dcb78d21f88987efad13054ec8fe4cb8d99a7",
       "images": []
     },
@@ -279,7 +279,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/ScreenToWorld/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/ScreenToWorld/",
       "title": "GetFocus",
-      "path": "p-LuaAPI/p-Movement/p-ScreenToWorld/index",
+      "path": "LuaAPI/Movement/ScreenToWorld",
       "sha256": "d16f474dd556e100eedca41ada1af9322355d025a4d34baa1c36d18f100fbfde",
       "images": []
     },
@@ -287,7 +287,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/SendMovementHeartbeat/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/SendMovementHeartbeat/",
       "title": "SendMovementHeartbeat",
-      "path": "p-LuaAPI/p-Movement/p-SendMovementHeartbeat/index",
+      "path": "LuaAPI/Movement/SendMovementHeartbeat",
       "sha256": "92987ad0227760733dcaad4da3c38126de19056a1408024af9f6f42a9c561dc0",
       "images": []
     },
@@ -295,7 +295,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/SetPitch/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/SetPitch/",
       "title": "SetPitch",
-      "path": "p-LuaAPI/p-Movement/p-SetPitch/index",
+      "path": "LuaAPI/Movement/SetPitch",
       "sha256": "3c7a2f14bb35283a2a5a6f8334ae94e629e04894f3ae0cb7e7661a52debed564",
       "images": []
     },
@@ -303,7 +303,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/SetPlayerFacing/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/SetPlayerFacing/",
       "title": "SetPlayerFacing",
-      "path": "p-LuaAPI/p-Movement/p-SetPlayerFacing/index",
+      "path": "LuaAPI/Movement/SetPlayerFacing",
       "sha256": "2ac577a167ac3723df036e3ab870bd8d6bca71df184fcc3fe62b7ff4f73f9de9",
       "images": []
     },
@@ -311,7 +311,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/TraceLine/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/TraceLine/",
       "title": "TraceLine",
-      "path": "p-LuaAPI/p-Movement/p-TraceLine/index",
+      "path": "LuaAPI/Movement/TraceLine",
       "sha256": "14b528c5619834d5104838675236103d62787cface7e235893d13211d18da0e7",
       "images": []
     },
@@ -319,7 +319,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Movement/WorldToScreen/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Movement/WorldToScreen/",
       "title": "WorldToScreen",
-      "path": "p-LuaAPI/p-Movement/p-WorldToScreen/index",
+      "path": "LuaAPI/Movement/WorldToScreen",
       "sha256": "f4e0a46d336d0b1395ee64a724e4241547c378ef13b6b77be891474d6496e08a",
       "images": []
     },
@@ -327,7 +327,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/GameObjectType/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/GameObjectType/",
       "title": "GameObjectType",
-      "path": "p-LuaAPI/p-Objects/p-GameObjectType/index",
+      "path": "LuaAPI/Objects/GameObjectType",
       "sha256": "92300e580bc3b2cade73f89b194dd6ad5ef39559eb03f22c794b15b13c38107f",
       "images": []
     },
@@ -335,7 +335,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/Object/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/Object/",
       "title": "Object",
-      "path": "p-LuaAPI/p-Objects/p-Object/index",
+      "path": "LuaAPI/Objects/Object",
       "sha256": "6ef2d8eed4216af3bda40a8d0c0a01ee539910e184d513247fc35100a2c6a873",
       "images": []
     },
@@ -343,7 +343,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectAnimationFlag/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectAnimationFlag/",
       "title": "ObjectAnimationFlag",
-      "path": "p-LuaAPI/p-Objects/p-ObjectAnimationFlag/index",
+      "path": "LuaAPI/Objects/ObjectAnimationFlag",
       "sha256": "dc148a132efc52f5e60aa1290f7831793715a29001fae9bfe33965918b8419fd",
       "images": []
     },
@@ -351,7 +351,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectBoundingRadius/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectBoundingRadius/",
       "title": "ObjectBoundingRadius",
-      "path": "p-LuaAPI/p-Objects/p-ObjectBoundingRadius/index",
+      "path": "LuaAPI/Objects/ObjectBoundingRadius",
       "sha256": "0bef73fdc03d4cd830edd5ca44d83e7885451811c6352f065a143ce7ea425853",
       "images": []
     },
@@ -359,7 +359,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectCreator/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectCreator/",
       "title": "ObjectCreator",
-      "path": "p-LuaAPI/p-Objects/p-ObjectCreator/index",
+      "path": "LuaAPI/Objects/ObjectCreator",
       "sha256": "c69da830234d01ef3d104f56ef9f4520095cf397105a89e9195f76764ed8fd55",
       "images": []
     },
@@ -367,7 +367,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectExists/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectExists/",
       "title": "ObjectExists",
-      "path": "p-LuaAPI/p-Objects/p-ObjectExists/index",
+      "path": "LuaAPI/Objects/ObjectExists",
       "sha256": "a5ebafb998eaee240eea41d0a89827f39108522709a5f5c19c9645d95abf37a2",
       "images": []
     },
@@ -375,7 +375,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectFacing/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectFacing/",
       "title": "ObjectFacing",
-      "path": "p-LuaAPI/p-Objects/p-ObjectFacing/index",
+      "path": "LuaAPI/Objects/ObjectFacing",
       "sha256": "228e6b3a25570cceb3efb87eebb4123c278004accb81d062a534c722189a1cf4",
       "images": []
     },
@@ -383,7 +383,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectField/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectField/",
       "title": "ObjectField",
-      "path": "p-LuaAPI/p-Objects/p-ObjectField/index",
+      "path": "LuaAPI/Objects/ObjectField",
       "sha256": "7df807f5aa77f6fe25284b69c3007901e8198cfa87c61021261bcb79f9495ea4",
       "images": []
     },
@@ -391,7 +391,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectFlags/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectFlags/",
       "title": "ObjectFlags",
-      "path": "p-LuaAPI/p-Objects/p-ObjectFlags/index",
+      "path": "LuaAPI/Objects/ObjectFlags",
       "sha256": "33657d0a7809da96b8f17ea8370e32a0eba212975af442067ea574350cbc1c0e",
       "images": []
     },
@@ -399,7 +399,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectHeight/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectHeight/",
       "title": "ObjectHeight",
-      "path": "p-LuaAPI/p-Objects/p-ObjectHeight/index",
+      "path": "LuaAPI/Objects/ObjectHeight",
       "sha256": "f47b75b0d354843ba1a426b89eea2a1db73f118a8577d7969f24234b2c64d12a",
       "images": []
     },
@@ -407,7 +407,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectId/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectId/",
       "title": "ObjectId",
-      "path": "p-LuaAPI/p-Objects/p-ObjectId/index",
+      "path": "LuaAPI/Objects/ObjectId",
       "sha256": "e9a305136dc526c87186e6c7ad70721f1beaf0ffb064f19f9f721e0228e0f7c5",
       "images": []
     },
@@ -415,7 +415,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectInteract/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectInteract/",
       "title": "ObjectInteract",
-      "path": "p-LuaAPI/p-Objects/p-ObjectInteract/index",
+      "path": "LuaAPI/Objects/ObjectInteract",
       "sha256": "351fa287bbdc8b93fab2759c43b3a4bcf36f35bb9235f3edd447c420916df925",
       "images": []
     },
@@ -423,7 +423,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectLootable/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectLootable/",
       "title": "ObjectLootable",
-      "path": "p-LuaAPI/p-Objects/p-ObjectLootable/index",
+      "path": "LuaAPI/Objects/ObjectLootable",
       "sha256": "f2e4e6d81eff0b6b47a7864af9ac6bfea81a583676f67709ea728e67f27be76d",
       "images": []
     },
@@ -431,7 +431,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectName/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectName/",
       "title": "ObjectName",
-      "path": "p-LuaAPI/p-Objects/p-ObjectName/index",
+      "path": "LuaAPI/Objects/ObjectName",
       "sha256": "eba057c379d210b1655a19675cdf1c591622dd198996c5f28e11781ec6b4c358",
       "images": []
     },
@@ -439,7 +439,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectPosition/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectPosition/",
       "title": "ObjectPosition",
-      "path": "p-LuaAPI/p-Objects/p-ObjectPosition/index",
+      "path": "LuaAPI/Objects/ObjectPosition",
       "sha256": "b7a6646fdca18a9d6f6e82f71984e34f2d02c2363d5fb452a332759c38fb2198",
       "images": []
     },
@@ -447,7 +447,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectRawPosition/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectRawPosition/",
       "title": "ObjectRawPosition",
-      "path": "p-LuaAPI/p-Objects/p-ObjectRawPosition/index",
+      "path": "LuaAPI/Objects/ObjectRawPosition",
       "sha256": "d3650c182115675df13c0fbe98ace2afbefefa85998c8a29823c0e60a48f9394",
       "images": []
     },
@@ -455,7 +455,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/Objects/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/Objects/",
       "title": "Objects",
-      "path": "p-LuaAPI/p-Objects/p-Objects/index",
+      "path": "LuaAPI/Objects/Objects",
       "sha256": "a6cbe9c330adb68d10eca11bc61220aabb25701395cb1f19c654a8d66be7805f",
       "images": []
     },
@@ -463,7 +463,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectSkinnable/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectSkinnable/",
       "title": "ObjectSkinnable",
-      "path": "p-LuaAPI/p-Objects/p-ObjectSkinnable/index",
+      "path": "LuaAPI/Objects/ObjectSkinnable",
       "sha256": "0dc9b521c020fccdd07a42cdac7af1166a4055032a5c2e1d2588e78ce4a426bc",
       "images": []
     },
@@ -471,7 +471,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectType/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectType/",
       "title": "GetObjectType",
-      "path": "p-LuaAPI/p-Objects/p-ObjectType/index",
+      "path": "LuaAPI/Objects/ObjectType",
       "sha256": "01d378062e151a0a5ac01625c99a18d293ad5e09c801ae050626b1e299460182",
       "images": []
     },
@@ -479,7 +479,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/ObjectUnitId/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/ObjectUnitId/",
       "title": "ObjetUnitId",
-      "path": "p-LuaAPI/p-Objects/p-ObjectUnitId/index",
+      "path": "LuaAPI/Objects/ObjectUnitId",
       "sha256": "83788a4c146da9affb51db382eb4fcb008c966bb40b84178133b12ff92de2d5c",
       "images": []
     },
@@ -487,7 +487,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Objects/UnitSummoner/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Objects/UnitSummoner/",
       "title": "UnitSummoner",
-      "path": "p-LuaAPI/p-Objects/p-UnitSummoner/index",
+      "path": "LuaAPI/Objects/UnitSummoner",
       "sha256": "b48a84b7f894952c0f9e310ac5f7666b8499af876b82cf5a39cb7c362bf12cd6",
       "images": []
     },
@@ -495,7 +495,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/CastTarget/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/CastTarget/",
       "title": "CastTarget",
-      "path": "p-LuaAPI/p-Targeting/p-CastTarget/index",
+      "path": "LuaAPI/Targeting/CastTarget",
       "sha256": "c2823d022791bc0da95ae297bb3fbaff6d45a65cda6544e853631aae8812bf45",
       "images": []
     },
@@ -503,7 +503,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/GetFocus/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/GetFocus/",
       "title": "GetFocus",
-      "path": "p-LuaAPI/p-Targeting/p-GetFocus/index",
+      "path": "LuaAPI/Targeting/GetFocus",
       "sha256": "2c71b6c9fe76c2f820e5fca5b104d9040b074ca2aa517233bd1a8c8866ab3d91",
       "images": []
     },
@@ -511,7 +511,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/GetMouseover/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/GetMouseover/",
       "title": "GetMouseover",
-      "path": "p-LuaAPI/p-Targeting/p-GetMouseover/index",
+      "path": "LuaAPI/Targeting/GetMouseover",
       "sha256": "b762b0c26d008584d660c7a8cfb6524ce46a0b444adbf75073b91ef6b2206535",
       "images": []
     },
@@ -519,7 +519,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/GetNPCObject/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/GetNPCObject/",
       "title": "GetNPCObject",
-      "path": "p-LuaAPI/p-Targeting/p-GetNPCObject/index",
+      "path": "LuaAPI/Targeting/GetNPCObject",
       "sha256": "3299d3e1eabf29ae2ef3abd06c7f6a1baf514def2c0edf0e43887cee2cdc3807",
       "images": []
     },
@@ -527,7 +527,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/PlayerTarget/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/PlayerTarget/",
       "title": "PlayerTarget",
-      "path": "p-LuaAPI/p-Targeting/p-PlayerTarget/index",
+      "path": "LuaAPI/Targeting/PlayerTarget",
       "sha256": "4ce5cf7f491406d5661bbb67798fe8bdaac5e3f3dd8b676108cc49e93e40661c",
       "images": []
     },
@@ -535,7 +535,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/SetFocus/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/SetFocus/",
       "title": "SetFocus",
-      "path": "p-LuaAPI/p-Targeting/p-SetFocus/index",
+      "path": "LuaAPI/Targeting/SetFocus",
       "sha256": "a78c00ea54e4a9980ea1caf0951644ab3e8850ba57a357e24471492724e4c026",
       "images": []
     },
@@ -543,7 +543,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/SetMouseover/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/SetMouseover/",
       "title": "SetMouseover",
-      "path": "p-LuaAPI/p-Targeting/p-SetMouseover/index",
+      "path": "LuaAPI/Targeting/SetMouseover",
       "sha256": "426343ea62c41eaada79be2710c768ec0ef66e72ac656fef2546b70c5e10e6e6",
       "images": []
     },
@@ -551,7 +551,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/SetNPCObject/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/SetNPCObject/",
       "title": "SetNPCObject",
-      "path": "p-LuaAPI/p-Targeting/p-SetNPCObject/index",
+      "path": "LuaAPI/Targeting/SetNPCObject",
       "sha256": "b0f2db276e6cb1ad80e14d9af9261550563e5a4f961aea1dbd7aa0ab522d9df9",
       "images": []
     },
@@ -559,7 +559,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Targeting/UnitTarget/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Targeting/UnitTarget/",
       "title": "UnitTarget",
-      "path": "p-LuaAPI/p-Targeting/p-UnitTarget/index",
+      "path": "LuaAPI/Targeting/UnitTarget",
       "sha256": "47edd912c57d1a83d3a27edb6edf70cd33f0ff1aa9dfc751c751125dd8f7eb54",
       "images": []
     },
@@ -567,7 +567,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/CombatReach/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/CombatReach/",
       "title": "CombatReach",
-      "path": "p-LuaAPI/p-Units/p-CombatReach/index",
+      "path": "LuaAPI/Units/CombatReach",
       "sha256": "22e2f19a94fbe76b8e35b110a17ba3cd02833088d4bc5f05029dc002fa93c7c8",
       "images": []
     },
@@ -575,7 +575,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/DynamicFlags/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/DynamicFlags/",
       "title": "DynamicFlags",
-      "path": "p-LuaAPI/p-Units/p-DynamicFlags/index",
+      "path": "LuaAPI/Units/DynamicFlags",
       "sha256": "72d32ca9019d3fb78893f319fa6417658a942d970cff65895b6eed0278857b20",
       "images": []
     },
@@ -583,7 +583,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/GetUnitBoundingRadius/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/GetUnitBoundingRadius/",
       "title": "GetUnitBoundingRadius",
-      "path": "p-LuaAPI/p-Units/p-GetUnitBoundingRadius/index",
+      "path": "LuaAPI/Units/GetUnitBoundingRadius",
       "sha256": "742902f4a4cad6fcc6c65b8be4e5fe2f310d0f4be7d0bec9da929cf653ca86a0",
       "images": []
     },
@@ -591,7 +591,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/GetUnitCreatedBy/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/GetUnitCreatedBy/",
       "title": "GetUnitCreatedBy",
-      "path": "p-LuaAPI/p-Units/p-GetUnitCreatedBy/index",
+      "path": "LuaAPI/Units/GetUnitCreatedBy",
       "sha256": "505d484b101fec05f582e0ef1da0cd263ab910fde4cb3a104ae61c4034648406",
       "images": []
     },
@@ -599,7 +599,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/GetUnitIsTapped/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/GetUnitIsTapped/",
       "title": "GetUnitIsTapped",
-      "path": "p-LuaAPI/p-Units/p-GetUnitIsTapped/index",
+      "path": "LuaAPI/Units/GetUnitIsTapped",
       "sha256": "937e86fad3d0a9b300b806ce340f5a6eab08158488850601ae1e0c6f89194cff",
       "images": []
     },
@@ -607,7 +607,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/GetUnitLootable/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/GetUnitLootable/",
       "title": "GetUnitLootable",
-      "path": "p-LuaAPI/p-Units/p-GetUnitLootable/index",
+      "path": "LuaAPI/Units/GetUnitLootable",
       "sha256": "96cefd2984fd9fcfea15d708e6c4c6f0c3b17d208f480a7b9014207268e7a30f",
       "images": []
     },
@@ -615,7 +615,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/GetUnitSummonedBy/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/GetUnitSummonedBy/",
       "title": "GetUnitSummonedBy",
-      "path": "p-LuaAPI/p-Units/p-GetUnitSummonedBy/index",
+      "path": "LuaAPI/Units/GetUnitSummonedBy",
       "sha256": "d85de33dae8ff67b525c55f70cc517f709f35171dad3e04cb0d9a59eb15df91d",
       "images": []
     },
@@ -623,7 +623,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/ObjectSkinnable/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/ObjectSkinnable/",
       "title": "ObjectSkinnable",
-      "path": "p-LuaAPI/p-Units/p-ObjectSkinnable/index",
+      "path": "LuaAPI/Units/ObjectSkinnable",
       "sha256": "08c11ac4e56c4ee671fba175577d3394030f25dddae91baa9578f802be935f24",
       "images": []
     },
@@ -631,7 +631,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/ObjectSkinType/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/ObjectSkinType/",
       "title": "ObjectSkinType",
-      "path": "p-LuaAPI/p-Units/p-ObjectSkinType/index",
+      "path": "LuaAPI/Units/ObjectSkinType",
       "sha256": "21462c76002675d4638fe8c86ecf0abbb3d0aa672477636be8ecfaef2a3c7e88",
       "images": []
     },
@@ -639,7 +639,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitCreatureTypeId/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitCreatureTypeId/",
       "title": "UnitCreatureTypeId",
-      "path": "p-LuaAPI/p-Units/p-UnitCreatureTypeId/index",
+      "path": "LuaAPI/Units/UnitCreatureTypeId",
       "sha256": "0930248ea0a5bf028d65bc58f1a4ddd95c249ef26a1cdd509ebf3b2dc201bf6f",
       "images": []
     },
@@ -647,7 +647,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitFacing/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitFacing/",
       "title": "UnitFacing",
-      "path": "p-LuaAPI/p-Units/p-UnitFacing/index",
+      "path": "LuaAPI/Units/UnitFacing",
       "sha256": "73f039309650b4e568f86c41d400f47187c08de6084261db4b28b4a612c46c01",
       "images": []
     },
@@ -655,7 +655,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitFlags/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitFlags/",
       "title": "UnitFlags",
-      "path": "p-LuaAPI/p-Units/p-UnitFlags/index",
+      "path": "LuaAPI/Units/UnitFlags",
       "sha256": "7568ace120f422d0f18e0473e8420cca92a3055a9174e288fb4958debbceb7b5",
       "images": []
     },
@@ -663,7 +663,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitFlags2/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitFlags2/",
       "title": "UnitFlags2",
-      "path": "p-LuaAPI/p-Units/p-UnitFlags2/index",
+      "path": "LuaAPI/Units/UnitFlags2",
       "sha256": "6a60f2803654ca43c1c162d030df0dfe06f47a43e976ce0ebb11d38e931be26b",
       "images": []
     },
@@ -671,7 +671,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitFlags3/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitFlags3/",
       "title": "UnitFlags3",
-      "path": "p-LuaAPI/p-Units/p-UnitFlags3/index",
+      "path": "LuaAPI/Units/UnitFlags3",
       "sha256": "c725516a87b280d4e96b2d382bc0108be46b9d8ac8ce4850557de41e63ea61a5",
       "images": []
     },
@@ -679,7 +679,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitMovementFlag/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitMovementFlag/",
       "title": "UnitMovementFlag",
-      "path": "p-LuaAPI/p-Units/p-UnitMovementFlag/index",
+      "path": "LuaAPI/Units/UnitMovementFlag",
       "sha256": "dcd5dcae23acd5a979b696f5536b7f416843521b6cbb477f15d2d690c9f7d038",
       "images": []
     },
@@ -687,7 +687,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Units/UnitTarget/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Units/UnitTarget/",
       "title": "UnitTarget",
-      "path": "p-LuaAPI/p-Units/p-UnitTarget/index",
+      "path": "LuaAPI/Units/UnitTarget",
       "sha256": "e7e35b6f30a5f7bc8acc63d4798353810ff76f0062379bd8af87428f60235d81",
       "images": []
     },
@@ -695,7 +695,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Utils/jsondecode/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Utils/jsondecode/",
       "title": "json.decode",
-      "path": "p-LuaAPI/p-Utils/p-jsondecode/index",
+      "path": "LuaAPI/Utils/jsondecode",
       "sha256": "67ea7a08d6a11a5749b223e7cd0d0e552165a3f96386993101f075a99a5d8549",
       "images": []
     },
@@ -703,7 +703,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Utils/jsonencode/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Utils/jsonencode/",
       "title": "json.encode",
-      "path": "p-LuaAPI/p-Utils/p-jsonencode/index",
+      "path": "LuaAPI/Utils/jsonencode",
       "sha256": "277b1a0856fe5d1916dcb76bc3703e9ff333dc3a42e7936beccd727453ae69b8",
       "images": []
     },
@@ -711,7 +711,7 @@
       "url": "https://docs.nilname.com/LuaAPI/Utils/LibDraw/",
       "finalUrl": "https://docs.nilname.com/LuaAPI/Utils/LibDraw/",
       "title": "⚠️ TODO",
-      "path": "p-LuaAPI/p-Utils/p-LibDraw/index",
+      "path": "LuaAPI/Utils/LibDraw",
       "sha256": "a1185c324707d6a624eb38b6bc34dcee19d64589b8fa08eb3d889d82c871c357",
       "images": []
     },
@@ -719,7 +719,7 @@
       "url": "https://docs.nilname.com/REST_API/readme/",
       "finalUrl": "https://docs.nilname.com/REST_API/readme/",
       "title": "Rest API",
-      "path": "p-REST_API/p-readme/index",
+      "path": "REST_API/readme",
       "sha256": "a91e603d0ac9d5695dcc29ef06736e885688394a0699b0990040341c12a8944a",
       "images": []
     }

@@ -15,9 +15,17 @@ export function canonicalUrl(value, base = SOURCE) {
 
 export function pagePath(value) {
   const parts = new URL(value).pathname.split('/').filter(Boolean);
-  // Encode every component, including dots, to avoid traversal and Windows names.
-  const safe = parts.map(part => 'p-' + encodeURIComponent(part).replace(/\./g, '%2E'));
-  return [...safe, 'index'].join('/');
+  // Preserve readable names; escape only unsafe characters and reserved names.
+  const safe = parts.map(part => {
+    const encoded = encodeURIComponent(part).replace(/\./g, '%2E');
+    return /^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/i.test(encoded)
+      ? '%' + encoded.charCodeAt(0).toString(16).toUpperCase() + encoded.slice(1)
+      : encoded;
+  });
+  if (!safe.length) return 'index';
+  // The root index and README are generated files.
+  if (safe.length === 1 && /^(index|readme)$/i.test(safe[0])) safe[0] = '%' + safe[0].charCodeAt(0).toString(16).toUpperCase() + safe[0].slice(1);
+  return safe.join('/');
 }
 
 // Runs in the browser's read-only DOM scope. No fetch, cookies or app internals.
