@@ -1,23 +1,7 @@
 -- SPDX-License-Identifier: GPL-3.0-only
--- Copy the contents of nilname/scripts/ into NilName's scripts/ directory.
-local Nn = ...
-local registry = _G
-local previous = registry.MurlocUIExample
--- Re-running the entry script reuses the UI, avoiding orphan frames/hooks.
-if previous and not previous.ui.disposed then
-    previous.window:Show()
-    print("Murloc UI: existing example shown. Use /reload to load source changes.")
-    return
-end
-local UI = {}
-local ok, err = pcall(function()
-    Nn:Require("/scripts/murloc-ui/init.lua", UI)
-    local ready, results = UI.Probe()
-    print("Murloc UI " .. UI.version .. " capability report:")
-    for _, result in ipairs(results) do
-        print((result.ok and "[OK] " or "[FAIL] ") .. result.name .. ": " .. result.detail)
-    end
-    assert(ready, "Required UI capability missing; see the report above")
+local Nn, Lab = ...
+
+function Lab.BuildOverview(UI)
     local window = UI.Window("MURLOC  /  UI laboratory", 640, 580)
     local body = window.body
     local function label(text, x, y, size, color)
@@ -85,31 +69,6 @@ local ok, err = pcall(function()
     list:SetPoint("TOPLEFT", 322, -260)
     label(UI.nativeLines and "Renderer: native lines" or "Renderer: pixel-stroke fallback", 0, 449, 11, "muted")
     label("Drag the title bar. /murlocui toggles this window.", 0, 467, 11, "muted")
-    local events = UI.Frame("Frame", window)
-    events:RegisterEvent("UI_SCALE_CHANGED")
-    events:SetScript("OnEvent", function() UI.RefreshPixels() end)
-    registry.MurlocUIExample = {ui = UI, window = window, input = input, slider = slider,
-        checkbox = check, action = action, dropdown = dropdown, list = list}
-    local slashHandler
-    if registry.SlashCmdList then
-        registry.SLASH_MURLOCUIEXAMPLE1 = "/murlocui"
-        slashHandler = function()
-            if window:IsShown() then window:Hide() else window:Show() end
-        end
-        registry.SlashCmdList.MURLOCUIEXAMPLE = slashHandler
-    end
-    UI.onDispose = function()
-        if registry.MurlocUIExample and registry.MurlocUIExample.ui == UI then
-            registry.MurlocUIExample = nil
-        end
-        if registry.SlashCmdList and registry.SlashCmdList.MURLOCUIEXAMPLE == slashHandler then
-            registry.SlashCmdList.MURLOCUIEXAMPLE = nil
-            registry.SLASH_MURLOCUIEXAMPLE1 = nil
-        end
-    end
-    window:Show()
-end)
-if not ok then
-    if UI.Dispose then UI.Dispose() end
-    print("Murloc UI startup failed: " .. tostring(err))
+    return {window = window, input = input, slider = slider, checkbox = check,
+        action = action, dropdown = dropdown, list = list}
 end

@@ -1,0 +1,1271 @@
+{
+  "upstream_revision": "6b2b2fedd8c27cc85370cb78991d32cb2a1c380f",
+  "target_client": "Retail",
+  "api_policy": "Preserve AF API where practical; explicit documented adaptations otherwise.",
+  "status_definition": "partial = related prototype exists, not AF API compatibility; planned = no implementation mapped. No module is verified yet.",
+  "sources": [
+    {
+      "source": ".unused/Atlas.lua",
+      "destination": "review/",
+      "phase": 6,
+      "status": "planned",
+      "current_files": [],
+      "note": "Upstream auxiliary/inactive source; review separately from active shipped coverage.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": ".unused/Aura.lua",
+      "destination": "review/",
+      "phase": 6,
+      "status": "planned",
+      "current_files": [],
+      "note": "Upstream auxiliary/inactive source; review separately from active shipped coverage.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 13
+    },
+    {
+      "source": ".unused/ItemLoadExecutorTest.lua",
+      "destination": "review/",
+      "phase": 6,
+      "status": "planned",
+      "current_files": [],
+      "note": "Upstream auxiliary/inactive source; review separately from active shipped coverage.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Data/ObjectPool.lua",
+      "destination": "data/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port pools and queues with API contract tests.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 2
+    },
+    {
+      "source": "Data/Queue.lua",
+      "destination": "data/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port pools and queues with API contract tests.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Demo.lua",
+      "destination": "examples/ui-lab/scenes/",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "examples/ui-lab/scenes/Overview.lua"
+      ],
+      "note": "One feature scene per family, plus contract and regression scenarios.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Executors/ItemLoadExecutor.lua",
+      "destination": "core/executors/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Owned scheduled work with cancellation and disposal.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 9
+    },
+    {
+      "source": "Executors/OnUpdateExecutor.lua",
+      "destination": "core/executors/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Owned scheduled work with cancellation and disposal.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 10
+    },
+    {
+      "source": "Init.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/init.lua",
+        "packages/murloc-ui/core/Lifecycle.lua"
+      ],
+      "note": "NilName lifecycle; retain AF initialization semantics through the compatibility adapter.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 6
+    },
+    {
+      "source": "Libs/FAIAP.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/base64.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/json.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/md5.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/qrcode.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/sha256.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Libs/utf8.lua",
+      "destination": "vendor/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Audit library API, version, license and dependencies; no implicit LibStub dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/Post.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/deDE.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/enUS.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/esES.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/esMX.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/frFR.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/itIT.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/koKR.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/ptBR.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/ruRU.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/zhCN.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Locales/zhTW.lua",
+      "destination": "locales/",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve locale lookup/fallback; verify font coverage in-game.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Media/Glyphs.lua",
+      "destination": "media/",
+      "phase": 4,
+      "status": "planned",
+      "current_files": [],
+      "note": "Semantic resources with procedural or built-in providers; map every asset without silently dropping it.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Media/Media.lua",
+      "destination": "media/",
+      "phase": 4,
+      "status": "planned",
+      "current_files": [],
+      "note": "Semantic resources with procedural or built-in providers; map every asset without silently dropping it.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 16
+    },
+    {
+      "source": "Media/SharedMedia.lua",
+      "destination": "media/",
+      "phase": 4,
+      "status": "planned",
+      "current_files": [],
+      "note": "Semantic resources with procedural or built-in providers; map every asset without silently dropping it.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 9
+    },
+    {
+      "source": "Spells/Bleeds.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Spells/Common.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 7
+    },
+    {
+      "source": "Spells/CrowdControls.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Spells/Dispellables.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Spells/Dispellables_Mists.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Spells/Interrupts.lua",
+      "destination": "game/spells/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "System/Addon.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 11
+    },
+    {
+      "source": "System/CallbackHandler.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 9
+    },
+    {
+      "source": "System/Communication.lua",
+      "destination": "integrations/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 10
+    },
+    {
+      "source": "System/EventHandler.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 5
+    },
+    {
+      "source": "System/Events.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 3
+    },
+    {
+      "source": "System/Hooks.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 2
+    },
+    {
+      "source": "System/Scripts.lua",
+      "destination": "core/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Adapt addon/global assumptions to owned services and optional integration contracts.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 2
+    },
+    {
+      "source": "Units/Class.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 15
+    },
+    {
+      "source": "Units/Common.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 31
+    },
+    {
+      "source": "Units/ItemLevel.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Units/Player.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Units/RangeCheck.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Units/StatusTimer.lua",
+      "destination": "game/units/",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Retail game-data/API coverage; optional module family independent of widgets.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 6
+    },
+    {
+      "source": "Utils/AsyncLoaders.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 7
+    },
+    {
+      "source": "Utils/Color.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 19
+    },
+    {
+      "source": "Utils/Curve.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 15
+    },
+    {
+      "source": "Utils/DateTime.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 9
+    },
+    {
+      "source": "Utils/Delay.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 4
+    },
+    {
+      "source": "Utils/Math.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/utils/Math.lua"
+      ],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 11
+    },
+    {
+      "source": "Utils/PixelUtil.lua",
+      "destination": "layout/",
+      "phase": 1,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/layout/Pixels.lua"
+      ],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 51
+    },
+    {
+      "source": "Utils/Serialization.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 2
+    },
+    {
+      "source": "Utils/String.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 16
+    },
+    {
+      "source": "Utils/Table.lua",
+      "destination": "utils/",
+      "phase": 1,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pure utilities; isolate timing, storage and client-specific behavior.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 35
+    },
+    {
+      "source": "Widgets/Animation.lua",
+      "destination": "widgets/Animation.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 16
+    },
+    {
+      "source": "Widgets/Base.lua",
+      "destination": "widgets/Base.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/primitives/Frame.lua",
+        "packages/murloc-ui/primitives/Border.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 67
+    },
+    {
+      "source": "Widgets/Button.lua",
+      "destination": "widgets/Button.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Button.lua",
+        "packages/murloc-ui/widgets/Checkbox.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 69
+    },
+    {
+      "source": "Widgets/Calendar.lua",
+      "destination": "widgets/Calendar.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 5
+    },
+    {
+      "source": "Widgets/CascadingMenu.lua",
+      "destination": "widgets/CascadingMenu.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 10
+    },
+    {
+      "source": "Widgets/Color.lua",
+      "destination": "widgets/Color.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/theme/Default.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 39
+    },
+    {
+      "source": "Widgets/ColorPicker.lua",
+      "destination": "widgets/ColorPicker.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 10
+    },
+    {
+      "source": "Widgets/DataBroker.lua",
+      "destination": "integrations/DataBroker.lua",
+      "phase": 5,
+      "status": "planned",
+      "current_files": [],
+      "note": "Optional broker/minimap integration; no mandatory addon dependency.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 1
+    },
+    {
+      "source": "Widgets/Dialog.lua",
+      "destination": "widgets/Dialog.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 16
+    },
+    {
+      "source": "Widgets/DragSorter.lua",
+      "destination": "widgets/DragSorter.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 5
+    },
+    {
+      "source": "Widgets/Dropdown.lua",
+      "destination": "widgets/Dropdown.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Dropdown.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 23
+    },
+    {
+      "source": "Widgets/EditBox.lua",
+      "destination": "widgets/EditBox.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/EditBox.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 47
+    },
+    {
+      "source": "Widgets/Font.lua",
+      "destination": "widgets/Font.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/primitives/Text.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 7
+    },
+    {
+      "source": "Widgets/FontString.lua",
+      "destination": "widgets/FontString.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/primitives/Text.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 24
+    },
+    {
+      "source": "Widgets/Frame.lua",
+      "destination": "widgets/Frame.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Window.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 37
+    },
+    {
+      "source": "Widgets/Glow.lua",
+      "destination": "widgets/Glow.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 5
+    },
+    {
+      "source": "Widgets/HelpTip.lua",
+      "destination": "widgets/HelpTip.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 7
+    },
+    {
+      "source": "Widgets/ImagePane.lua",
+      "destination": "widgets/ImagePane.lua",
+      "phase": 4,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pan/zoom/crop interactions; renderer source support must be explicit.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 10
+    },
+    {
+      "source": "Widgets/ImageViewer.lua",
+      "destination": "widgets/ImageViewer.lua",
+      "phase": 4,
+      "status": "planned",
+      "current_files": [],
+      "note": "Preserve pan/zoom/crop interactions; renderer source support must be explicit.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 7
+    },
+    {
+      "source": "Widgets/Misc.lua",
+      "destination": "widgets/Misc.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 2
+    },
+    {
+      "source": "Widgets/Mover.lua",
+      "destination": "widgets/Mover.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 8
+    },
+    {
+      "source": "Widgets/Popup.lua",
+      "destination": "widgets/Popup.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 4
+    },
+    {
+      "source": "Widgets/Scroll.lua",
+      "destination": "widgets/Scroll.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/ScrollList.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 64
+    },
+    {
+      "source": "Widgets/Sheet.lua",
+      "destination": "widgets/Sheet.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 8
+    },
+    {
+      "source": "Widgets/Slider.lua",
+      "destination": "widgets/Slider.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Slider.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 18
+    },
+    {
+      "source": "Widgets/SmoothStatusBarMixin.lua",
+      "destination": "widgets/SmoothStatusBarMixin.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 3
+    },
+    {
+      "source": "Widgets/StatusBar.lua",
+      "destination": "widgets/StatusBar.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Progress.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 31
+    },
+    {
+      "source": "Widgets/Texture.lua",
+      "destination": "widgets/Texture.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/primitives/Texture.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 19
+    },
+    {
+      "source": "Widgets/TimeFormat.lua",
+      "destination": "widgets/TimeFormat.lua",
+      "phase": 3,
+      "status": "planned",
+      "current_files": [],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 3
+    },
+    {
+      "source": "Widgets/Tooltip.lua",
+      "destination": "widgets/Tooltip.lua",
+      "phase": 2,
+      "status": "partial",
+      "current_files": [
+        "packages/murloc-ui/widgets/Tooltip.lua"
+      ],
+      "note": "Port constructors and every documented/used mixin method; visual and interaction parity.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 14
+    },
+    {
+      "source": "Widgets/TooltipTemplate.xml",
+      "destination": "widgets/Tooltip.lua",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Replace XML with Lua-created behavior; audit all template methods.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    },
+    {
+      "source": "Widgets/TooltipTemplate_Classic.xml",
+      "destination": "widgets/Tooltip.lua",
+      "phase": 2,
+      "status": "planned",
+      "current_files": [],
+      "note": "Replace XML with Lua-created behavior; audit all template methods.",
+      "af_contract": "unverified",
+      "retail_runtime": "unverified",
+      "visual_parity": "unverified",
+      "declaration_count": 0
+    }
+  ],
+  "external_toc_entries": [
+    {
+      "path": "Libs/LibStub/LibStub.lua",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/CallbackHandler-1.0/CallbackHandler-1.0.lua",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/TaintLess/TaintLess.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibSharedMedia-3.0/lib.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibCustomGlow-1.0/LibCustomGlow-1.0.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/AceComm-3.0/AceComm-3.0.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibSerialize/lib.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibDeflate/lib.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibDataBroker-1.1/LibDataBroker-1.1.lua",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Libs/LibDBIcon-1.0/lib.xml",
+      "enabled": true,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Spells/Dispels.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Spells/Casts.lua",
+      "enabled": false,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/AuraCooldown.xml",
+      "enabled": false,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/Aura.lua",
+      "enabled": false,
+      "condition": null,
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretHealthBar.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretPowerBar.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretCastBar.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretNameText.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretHealthText.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    },
+    {
+      "path": "Widgets_UnitFrames/SecretPowerText.lua",
+      "enabled": false,
+      "condition": "AllowLoadGameType mainline",
+      "present": false
+    }
+  ]
+}

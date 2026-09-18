@@ -1,5 +1,11 @@
 # AbstractFramework to NilName: compatibility assessment
 
+This is the initial feasibility assessment. The current scope is **full AF
+feature coverage, preserving AF API contracts where practical, Retail first**.
+See [the architecture](ui/architecture.md) and [coverage plan](ui/coverage/features.md)
+for the current structure and implementation status. Deferred items below remain
+in scope; they are scheduled later rather than excluded.
+
 Reviewed 2026-09-18. AbstractFramework source revision:
 `6b2b2fedd8c27cc85370cb78991d32cb2a1c380f`.
 

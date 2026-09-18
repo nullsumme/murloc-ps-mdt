@@ -1,10 +1,22 @@
 # Murloc MDT
 
-The [Lua-only NilName UI library and example plugin](nilname/README.md) live in
-`nilname/scripts/`. Copy that directory's contents into NilName's `scripts/`
-folder, then enter the game or `/reload`. Use `/murlocui` to toggle the example.
-The implementation uses procedural controls inspired by AbstractFramework;
-live-client compatibility and rendering still need in-game testing.
+The [Murloc UI framework](packages/murloc-ui/README.md) is a first-class reusable
+package. Target: **full AbstractFramework feature coverage, preserving its API
+where practical, Retail first**. The current runtime is still a partial prototype.
+
+- [Architecture and folder structure](docs/ui/architecture.md)
+- [Feature coverage and implementation phases](docs/ui/coverage/features.md)
+- [Pinned upstream API, mixin and asset inventory](docs/ui/coverage/inventory.md)
+- [NilName UI laboratory and in-game checklist](examples/ui-lab/README.md)
+
+Build the example with `python scripts/package_nilname.py`; extract
+`dist/murloc-ui.zip` and copy its `scripts` contents into NilName's `scripts`
+folder. Use `/murlocui` after entering the game or `/reload`. Build without the
+example using `python scripts/package_nilname.py --library-only`.
+
+Run `python tests/test_ui.py` (install `tests/requirements-ui.txt` first) and
+`python tests/verify_ui_coverage.py`. The tests cover Lua behavior and package
+layout; live-client compatibility and rendering still require in-game testing.
 
 Documentation reference snapshot from [Nil-Name Docs](https://docs.nilname.com/).
 Browse the [downloaded documentation](docs/nilname/README.md).

@@ -17,8 +17,21 @@ be read and searched locally in every session.
 Validation: `node --test tests/scrape-docs.test.mjs` and
 `python tests/verify_snapshot.py`.
 
-The UI library and test plugin are in `nilname/scripts/`; setup/API details are
-in `nilname/README.md`. Run `python tests/test_ui.py` with the dependency from
-`tests/requirements-ui.txt`. Preserve the upstream attribution and GPL license.
-Keep runtime distribution Lua-only and avoid addon/XML/custom-asset dependencies.
-Mock tests are not proof of in-game rendering or client compatibility.
+The reusable UI library is in `packages/murloc-ui/`. Its NilName test plugin is
+in `examples/ui-lab/`; `examples/_murloc_ui_example.lua` is the auto-start entry.
+Build install layouts with `scripts/package_nilname.py`; do not maintain a second
+runtime source copy under `nilname/scripts/` or commit generated `dist/` files.
+
+Read `docs/ui/architecture.md` and `docs/ui/coverage/features.md` before extending
+the library. The target is full AbstractFramework coverage with AF API contracts
+preserved where practical, Retail first. The pinned source inventory is in
+`docs/ui/coverage/upstream.json`; maintain its source-to-module `status.json` map.
+A similarly named prototype does not establish API, behavior or visual parity.
+Do not mark parity verified without evidence or silently stub unsupported APIs.
+
+Keep one focused widget per file, explicit dependency/export entries in
+`packages/murloc-ui/manifest.lua`, and example scenes outside the library.
+Run `python tests/test_ui.py` with `tests/requirements-ui.txt` and
+`python tests/verify_ui_coverage.py`. Preserve attribution and GPL licensing.
+Keep runtime distribution Lua-only and avoid mandatory addon/XML/custom-asset
+dependencies. Mock tests are not proof of in-game rendering or compatibility.

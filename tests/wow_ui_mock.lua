@@ -71,8 +71,7 @@ local logs = {}
 print = function(message) logs[#logs + 1] = tostring(message) end
 local nn = {}
 function nn:Require(path, ...)
-    local relative = path:gsub("^/scripts/", "nilname/scripts/")
-    local chunk = assert(loadfile(REPO .. "/" .. relative))
+    local chunk = assert(loadfile(resolve_script(path)))
     return chunk(self, ...)
 end
 local function start() nn:Require("/scripts/_murloc_ui_example.lua") end
@@ -87,6 +86,8 @@ if MOCK_NO_TEXTURES then
 end
 local app = assert(MurlocUIExample, table.concat(logs, "\n"))
 assert(app.ui.loaded and app.ui.nativeLines == not MOCK_NO_LINES)
+for _, module in ipairs(app.ui.manifest) do assert(app.ui.loadedModules[module.id]) end
+nn:Require('/scripts/murloc-ui/init.lua', app.ui)
 local count = #objects
 start()
 assert(#objects == count, "Entry script must be idempotent")
