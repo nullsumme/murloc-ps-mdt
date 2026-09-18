@@ -1,5 +1,11 @@
 # Murloc MDT
 
+The [Lua-only NilName UI library and example plugin](nilname/README.md) live in
+`nilname/scripts/`. Copy that directory's contents into NilName's `scripts/`
+folder, then enter the game or `/reload`. Use `/murlocui` to toggle the example.
+The implementation uses procedural controls inspired by AbstractFramework;
+live-client compatibility and rendering still need in-game testing.
+
 Documentation reference snapshot from [Nil-Name Docs](https://docs.nilname.com/).
 Browse the [downloaded documentation](docs/nilname/README.md).
 

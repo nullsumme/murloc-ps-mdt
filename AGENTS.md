@@ -16,3 +16,9 @@ be read and searched locally in every session.
 
 Validation: `node --test tests/scrape-docs.test.mjs` and
 `python tests/verify_snapshot.py`.
+
+The UI library and test plugin are in `nilname/scripts/`; setup/API details are
+in `nilname/README.md`. Run `python tests/test_ui.py` with the dependency from
+`tests/requirements-ui.txt`. Preserve the upstream attribution and GPL license.
+Keep runtime distribution Lua-only and avoid addon/XML/custom-asset dependencies.
+Mock tests are not proof of in-game rendering or client compatibility.
