@@ -49,8 +49,14 @@ export function extractPage() {
     if (tag === 'strong' || tag === 'b') return '**' + children() + '**';
     if (tag === 'em' || tag === 'i') return '*' + children() + '*';
     if (tag === 'br') return '\n';
-    // Retain table structure exactly in Markdown's supported inline HTML.
-    if (tag === 'table') return '\n\n' + node.outerHTML + '\n\n';
+    if (tag === 'table') {
+      const rows = [...node.querySelectorAll('tr')].map(row =>
+        [...row.querySelectorAll('th, td')].map(cell => render(cell).trim().replace(/\|/g, '\\|').replace(/\n/g, ' ')));
+      if (!rows.length) return '';
+      const width = Math.max(...rows.map(row => row.length));
+      const line = row => '| ' + Array.from({ length: width }, (_, i) => row[i] || '').join(' | ') + ' |';
+      return '\n\n' + [line(rows[0]), line(Array(width).fill('---')), ...rows.slice(1).map(line)].join('\n') + '\n\n';
+    }
     if (tag === 'li') return '\n- ' + children().trim().replace(/\n/g, '\n  ');
     if (tag === 'blockquote') return '\n\n' + children().trim().replace(/^/gm, '> ') + '\n\n';
     if (['p', 'div', 'ul', 'ol', 'section', 'details', 'hr'].includes(tag)) return '\n\n' + children().trim() + '\n\n';
@@ -58,7 +64,6 @@ export function extractPage() {
   }
   return {
     title: article.querySelector('h1')?.textContent.trim() || document.title,
-    html: article.outerHTML,
     markdown: render(article).trim() + '\n',
     links: [...document.querySelectorAll('a[href]')].map(a => a.href),
     images: [...article.querySelectorAll('img[src]')].map(img => img.src),
@@ -110,7 +115,6 @@ export async function createScraper(tab, { output = 'docs/nilname', delayMs = 30
           await mkdir(resolve(root, path, '..'), { recursive: true });
           const markdown = `<!-- Source: ${url} -->\n\n` + data.markdown;
           await writeFile(join(root, path + '.md'), markdown);
-          await writeFile(join(root, path + '.html'), '<!doctype html>\n<meta charset="utf-8">\n<base href="' + actual + '">\n' + data.html + '\n');
           pages.push({ url, finalUrl: actual, title: data.title, path,
             sha256: createHash('sha256').update(markdown).digest('hex'), images: data.images });
         } catch (error) {

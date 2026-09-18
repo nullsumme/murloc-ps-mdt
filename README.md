@@ -3,12 +3,19 @@
 Documentation reference snapshot from [Nil-Name Docs](https://docs.nilname.com/).
 Browse the [downloaded documentation](docs/nilname/README.md).
 
+## Using the docs in future agent sessions
+
+Start at [the documentation index](docs/nilname/README.md), then read the linked
+Markdown files directly. Search locally with `rg -n "GeneratePath" docs/nilname -g '*.md'`.
+Each page records its original source URL. `AGENTS.md` points future agents to
+this snapshot automatically. Reading the saved docs needs no browser or network.
+
 ## Refresh the documentation
 
 `scripts/scrape-docs.mjs` crawls every same-origin HTML link reachable from the
-homepage, including the full MkDocs navigation. It writes Markdown, original
-article HTML, a browsable index, and a JSON manifest with source URLs and SHA-256
-hashes. Code blocks and HTML tables are retained. Images and external links
+homepage, including the full MkDocs navigation. It saves documentation as Markdown only, with a browsable Markdown index
+and a JSON crawl manifest containing source URLs and SHA-256 hashes.
+Code blocks are retained and tables are converted to Markdown. Images and external links
 remain online references; this is a documentation snapshot, not an offline site mirror.
 
 The site uses Cloudflare browser verification, so the scraper uses a connected
@@ -40,5 +47,5 @@ discovered. Original documentation remains attributable to its respective author
 this repository does not grant a new license to the copied content.
 
 Run the crawler utility checks with `node --test tests/scrape-docs.test.mjs`.
-Verify snapshot completeness, file hashes and code preservation with
+Verify snapshot completeness, file hashes and Markdown-only storage with
 `python tests/verify_snapshot.py` (Python 3, standard library only).
