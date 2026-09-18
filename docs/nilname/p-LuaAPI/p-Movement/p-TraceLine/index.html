@@ -1,0 +1,89 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Movement/TraceLine/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="traceline">TraceLine</h1>
+<p>Casts a ray in the 3D world scene to find a collision point.</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">TraceLine</span><span class="p">(</span><span class="nv">x1</span><span class="p">,</span><span class="w"> </span><span class="nv">y1</span><span class="p">,</span><span class="w"> </span><span class="nv">z1</span><span class="p">,</span><span class="w"> </span><span class="nv">x2</span><span class="p">,</span><span class="w"> </span><span class="nv">y2</span><span class="p">,</span><span class="w"> </span><span class="nv">z2</span><span class="p">,</span><span class="w"> </span><span class="nv">flags</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>x1</strong><ul>
+<li><code>number</code> : start X-axis</li>
+</ul>
+</li>
+<li><strong>y1</strong><ul>
+<li><code>number</code> : start Y-axis</li>
+</ul>
+</li>
+<li><strong>z1</strong><ul>
+<li><code>number</code> : start Z-axis</li>
+</ul>
+</li>
+<li><strong>x2</strong><ul>
+<li><code>number</code> : end X-axis</li>
+</ul>
+</li>
+<li><strong>y2</strong><ul>
+<li><code>number</code> : end Y-axis</li>
+</ul>
+</li>
+<li><strong>z2</strong><ul>
+<li><code>number</code> : end Z-axis</li>
+</ul>
+</li>
+<li><strong>flags</strong><ul>
+<li><code>number</code> : flags to indicate collision types</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="returns">Returns</h2>
+<ul>
+<li><strong>x</strong><ul>
+<li><code>number|boolean</code> : False or X-axis we collided with</li>
+</ul>
+</li>
+<li><strong>y</strong><ul>
+<li><code>number|nil</code> : nil or Y-axis we collided with</li>
+</ul>
+</li>
+<li><strong>z</strong><ul>
+<li><code>number|nil</code> : nil or Z-axis we collided with</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="details">Details</h2>
+<p>The game will first perform some AABB tests to figure out what objects are within the range of your given vector. From there it will then test all objects in that range. So using smaller vectors when possible can actually reduce performance impact.</p>
+<p>The flags you may want to set:</p>
+<div class="language-text highlight"><pre id="__code_1"><span></span><code>M2Collision = 0x1
+M2Render = 0x2
+WMOCollision = 0x10
+WMORender = 0x20
+Terrain = 0x100
+WaterWalkableLiquid = 0x10000
+Liquid = 0x20000
+EntityCollision = 0x100000
+Unknown = 0x200000
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

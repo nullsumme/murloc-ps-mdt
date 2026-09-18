@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/API/Guidelines/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>ℹ️ Guidelines</h1>
+
+<h2 id="performance">⚠️ Performance</h2>
+<p>Please note that NoName is a versatile framework providing fast and secure features for our Lua developers. However, the <strong>incorrect usage of our APIs will most likely result in performance hits</strong> with an order of magnitudes. Please pay close attention to the instructions below to avoid falling into certain pitfalls which will cost you a decrease in frame rates</p>
+<p>The following API's are optimized for speed, please prefer these where possible:</p>
+<ul>
+<li>Object / ObjectPointer</li>
+<li>GetFocus <em>(uses <code>Object('focus')</code> )</em></li>
+<li>GetNPCObject <em>( uses <code>Object('npc')</code> )</em></li>
+<li>SetFocus</li>
+<li>SetNPCObject</li>
+<li>ObjectType</li>
+<li>ObjectExists</li>
+<li>ObjectField - <em>(Used by nearly all Object Descriptor API)</em></li>
+</ul>
+<p>💡Despite optimization, please avoid doing <code>ObjectType</code> on every object and instead use <code>ObjectManager(type)</code> to obtain a table with objects that all have the given <code>type</code>. </p>
+<p>💡Most Object Descriptors (e.g, <code>ObjectField</code>, <code>ObjectRotation</code>, etc) already use the optimized <code>ObjectField</code> API 😊.</p>
+<h2 id="api-list">📃API List</h2>
+<ul>
+<li>Cryptography  - Correct usage of the cryptographic APIs</li>
+<li>Filesystem  - How to access the file system </li>
+<li>HTTP - How to do basic HTTP requests. <em>(more on this for advanced users, just ask)</em></li>
+<li>Navigation - Detail on how the NoName navigation system works</li>
+<li>Objects - Everything you need to know about ObjectManager and Object Descriptors</li>
+<li>Utility - miscellaneous</li>
+</ul>
+<h2 id="noname-libraries-included">📚 NoName Libraries Included</h2>
+<ul>
+<li>JSON - <code>NoName.Utils.JSON</code></li>
+<li>LibDraw - <code>NoName.Utils.Draw:New()</code></li>
+<li>LibStub - <code>NoName.Utils.LibStub</code></li>
+<li>SHA/HMAC - <code>NoName.Utils.sha</code></li>
+<li>AES - <code>NoName.Utils.AES</code></li>
+<li>ACEGUI - <code>NoName.Utils.AceGUI</code></li>
+<li>Storage - <code>NoName.Utils.Storage.read</code> / <code>Noname.Utils.Storage.write</code></li>
+</ul>
+<!-- Please inform us in case you wish to see these libraries included within NoName. -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

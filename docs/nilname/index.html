@@ -1,0 +1,49 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Nn Setup</h1>
+
+<h2 id="unlocker">Unlocker</h2>
+<p>On a general note you only need to put your Nn Token inside the <code>license.txt</code> file found at the base directory and then run the <code>NoName.exe</code> before you run your client of choice.</p>
+<p>You can create a <code>path.txt</code> file in there if you want Nn to launch the client for you but only one client can be specified
+</p><div class="language-text highlight"><pre id="__code_0"><span></span><code>C:\Program Files (x86)\World of Warcraft\_retail_\Wow.exe
+</code></pre></div><p></p>
+<h2 id="navigation-server">Navigation Server</h2>
+<p>The <code>nnav.exe</code> Only needs the <code>mmaps</code> folder beside it and can be placed on a standalone folder by itself to serve as many clients you can think of.</p>
+<p>You only need to run it once and there is no need for it to be restarted on Client Restart</p>
+<!-- It can even be running on a separate PC on the network or outside a VM but that requires some extra configuration `in-game` to get it running
+
+Read Further Info in `API/Navigation` -->
+
+<h2 id="advanced">Advanced</h2>
+<p>For Extra Security we advice that you run NnNav on a separate device on the network or even inside a Windows VM <em>( even windows 7 will do just fine to minimize resources )</em> and configure Navigation <code>in-game</code> to connect to it. <strong>See API/Navigation</strong></p>
+<p>The <code>NoName.exe</code> that is provided can be executed with additional arguments</p>
+<p><code>NoName Token Count "path/to/exe"</code></p>
+<ul>
+<li><code>Token</code> is your Nn Token aka <code>NbAAaaaAAAaaaAAAaaa</code></li>
+<li><code>Count</code> is how many clients you want to launch and inject to</li>
+<li><code>Path</code> is the path to the executable to be launched, this is highly recommended to increase chances of injection</li>
+</ul>
+<p>There is also a way for you to even <code>rename</code> your tool to whatever you like even removing the <code>.exe</code> file extention and just be creative by having a <code>.bat</code> file running everything for you</p>
+<div class="language-bat highlight"><pre id="__code_1"><span></span><code tabindex="0"><span class="k">start</span> sqlite.db NbAAaaaAAAaaaAAAaaa 1 <span class="s2">"C:\Program Files (x86)\World of Warcraft\_retail_\Wow.exe"</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

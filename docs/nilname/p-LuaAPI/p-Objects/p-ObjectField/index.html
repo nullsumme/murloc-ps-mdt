@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Objects/ObjectField/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="objectfield">ObjectField</h1>
+<p>Advanced function to read raw memory from a Nn object. You should only use this if no other Nn function provides what you need!</p>
+<p>⚠️ Hardcoded offsets may crash game after a update.</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectField</span><span class="p">(</span><span class="nv">object</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>object</strong><ul>
+<li><code>number</code> : Nn Object identifier</li>
+</ul>
+</li>
+<li><strong>offset</strong><ul>
+<li><code>number</code> : Memory offset relative to the Nn Object</li>
+</ul>
+</li>
+<li><strong>type</strong><ul>
+<li><code>number</code> : The data type for casting</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="returns">Returns</h2>
+<ul>
+<li><strong>data</strong><ul>
+<li><code>number</code> : Returns data casted into the specified type</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="details">Details</h2>
+<p>⚠️ Please note that this function <strong>may crash the game</strong> if not used correctly. The memory offsets you hardcode may change in between game versions!</p>
+<p>The different types can be found here:</p>
+<div class="language-text highlight"><pre id="__code_1"><span></span><code>1 - BYTE (1 byte)
+2 - WORD (2 bytes)
+3 - DWORD (4 bytes)
+4 - float (decimal number)
+5 - object id (number)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

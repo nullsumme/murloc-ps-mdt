@@ -1,0 +1,160 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/Home/LuaAPISummary/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-summary">API Summary</h1>
+<p>These are all the Lua APIs provided by Nn. Some may already exist and are 'unlocked', those are marked with a 🔓 icon.</p>
+<p>Regardless, all of these APIs are located in the Nn _ENV, which is default set when <a href="#">loading a Nn script</a>.</p>
+<p>NOTE: the terms "Nn Object" and "Object" are used interchangeably and have the same meaning.</p>
+<h2 id="targeting-and-focus">🎯 Targeting and Focus</h2>
+<ul>
+<li>ClearTarget 🔓</li>
+<li>
+<p>FocusUnit 🔓</p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Targeting/GetFocus/">GetFocus</a></p>
+</li>
+<li><a href="../../LuaAPI/Targeting/GetMouseover/">GetMouseover</a></li>
+<li>
+<p><a href="../../LuaAPI/Targeting/GetNPCObject/">GetNPCObject</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Targeting/SetFocus/">SetFocus</a></p>
+</li>
+<li><a href="../../LuaAPI/Targeting/SetMouseover/">SetMouseover</a></li>
+<li>
+<p><a href="../../LuaAPI/Targeting/SetNPCObject/">SetNPCObject</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Targeting/UnitTarget/">UnitTarget</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Targeting/CastTarget/">CastTarget</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Targeting/PlayerTarget/">PlayerTarget</a></p>
+</li>
+<li>
+<p>TargetUnit 🔓</p>
+</li>
+</ul>
+<h2 id="object-management">🪨 Object Management</h2>
+<p>Objects and GameObjects are two different things. A "GameObject" is just a type of "Object", the Type of an "Object" is obtained with <a href="../../LuaAPI/Objects/ObjectType/"><code>ObjectType</code></a>.</p>
+<ul>
+<li>GetObjects</li>
+<li><a href="../../LuaAPI/Objects/Object/">Object</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectFacing/">ObjectFacing</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectField/">ObjectField</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectHeight/">ObjectHeight</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectName/">ObjectName</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectPosition/">ObjectPosition</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectType/">ObjectType</a></li>
+<li><a href="../../LuaAPI/Objects/ObjectAnimationFlag/">ObjectAnimationFlag</a></li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectBoundingRadius/">ObjectBoundingRadius</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectExists/">ObjectExists</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectFlags/">ObjectFlags</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectId/">ObjectId</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectUnitId/">ObjectUnitId</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectInteract/">ObjectInteract</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectLootable/">ObjectLootable</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Units/ObjectSkinType/">ObjectSkinType</a></p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectSkinnable/">ObjectSkinnable</a></p>
+</li>
+<li>
+<p>ObjectYaw</p>
+</li>
+<li>
+<p>ObjectRotation</p>
+</li>
+<li>
+<p><a href="../../LuaAPI/Objects/ObjectCreator/">ObjectCreator</a></p>
+</li>
+<li>UnitCreator</li>
+<li><a href="../../LuaAPI/Objects/UnitSummoner/">UnitSummoner</a></li>
+</ul>
+<h2 id="unitcharacter-info">🧍 Unit/Character Info</h2>
+<p>A Unit is often a Player, Local Player <em>(you)</em> or NPC. These "Units" are a type of "Object".</p>
+<ul>
+<li><a href="../../LuaAPI/Units/CombatReach/">CombatReach</a></li>
+<li><a href="../../LuaAPI/Units/DynamicFlags/">DynamicFlags</a></li>
+<li><a href="../../LuaAPI/Objects/GameObjectType/">GameObjectType</a></li>
+<li><a href="../../LuaAPI/Units/GetUnitBoundingRadius/">GetUnitBoundingRadius</a></li>
+<li>GetUnitCombatReach</li>
+<li><a href="../../LuaAPI/Units/GetUnitCreatedBy/">GetUnitCreatedBy</a></li>
+<li><a href="../../LuaAPI/Units/GetUnitIsTapped/">GetUnitIsTapped</a></li>
+<li><a href="../../LuaAPI/Units/GetUnitLootable/">GetUnitLootable</a></li>
+<li><a href="../../LuaAPI/Units/GetUnitSummonedBy/">GetUnitSummonedBy</a></li>
+<li>GetUnitTarget</li>
+<li>NPCFlags</li>
+<li><a href="../../LuaAPI/Units/ObjectSkinType/">ObjectSkinType</a></li>
+<li><a href="../../LuaAPI/Units/ObjectSkinnable/">ObjectSkinnable</a></li>
+<li><a href="../../LuaAPI/Units/UnitCreatureTypeId/">UnitCreatureTypeId</a></li>
+<li><a href="../../LuaAPI/Units/UnitFacing/">UnitFacing</a></li>
+<li><a href="../../LuaAPI/Units/UnitFlags/">UnitFlags</a></li>
+<li>UnitFlags1</li>
+<li><a href="../../LuaAPI/Units/UnitFlags2/">UnitFlags2</a></li>
+<li><a href="../../LuaAPI/Units/UnitFlags3/">UnitFlags3</a></li>
+<li>UnitFlags4</li>
+<li><a href="../../LuaAPI/Units/UnitMovementFlag/">UnitMovementFlag</a></li>
+<li><a href="../../LuaAPI/Objects/UnitSummoner/">UnitSummoner</a></li>
+</ul>
+<h2 id="movement-positioning">🧭 Movement &amp; Positioning</h2>
+<ul>
+<li><a href="../../LuaAPI/Movement/ClickPosition/">ClickPosition</a></li>
+<li><a href="../../LuaAPI/Movement/ClickToMove/">ClickToMove</a></li>
+<li><a href="../../LuaAPI/Movement/GetCameraPosition/">GetCameraPosition</a></li>
+<li><a href="../../LuaAPI/Movement/GetCorpsePosition/">GetCorpsePosition</a></li>
+<li><a href="../../LuaAPI/Movement/GetPitch/">GetPitch</a></li>
+<li><a href="../../LuaAPI/Movement/LastTerrainClick/">LastTerrainClick</a></li>
+<li><a href="../../LuaAPI/Movement/SendMovementHeartbeat/">SendMovementHeartbeat</a></li>
+<li><a href="../../LuaAPI/Movement/SetPitch/">SetPitch</a></li>
+<li><a href="../../LuaAPI/Movement/SetPlayerFacing/">SetPlayerFacing</a></li>
+<li><a href="../../LuaAPI/Movement/TraceLine/">TraceLine</a></li>
+<li><a href="../../LuaAPI/Movement/ScreenToWorld/">ScreenToWorld</a></li>
+<li><a href="../../LuaAPI/Movement/WorldToScreen/">WorldToScreen</a></li>
+</ul>
+<h2 id="miscellaneous">🧩 Miscellaneous</h2>
+<ul>
+<li><a href="../../LuaAPI/Miscellaneous/GetKeyState/">GetKeyState</a></li>
+<li>GetSessionID</li>
+<li><a href="../../LuaAPI/Miscellaneous/GetSessionId/">GetSessionId</a></li>
+<li><a href="../../LuaAPI/Miscellaneous/GetSessionIndex/">GetSessionIndex</a></li>
+<li><a href="../../LuaAPI/Miscellaneous/GetWowAccount/">GetWowAccount</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

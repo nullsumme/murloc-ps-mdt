@@ -1,0 +1,58 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Objects/Object/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="object">Object</h1>
+<p>Takes a lua token and returns a Nn Object identifier in return</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nv">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Object</span><span class="p">(</span><span class="nv">token</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>token</strong><ul>
+<li><code>string</code> : Takes a Lua token</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="returns">Returns</h2>
+<ul>
+<li><strong>object</strong><ul>
+<li><code>number</code> : The Nn Object identifier</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="details">Details</h2>
+<p>Lua tokens are things like <code>"player"</code> or <code>"focus"</code>.</p>
+<p>Full list of Lua tokens:</p>
+<ul>
+<li><code>"target"</code></li>
+<li><code>"focus"</code></li>
+<li><code>"player"</code></li>
+<li>...</li>
+</ul>
+<p>More complex combination can be made like so:
+- <code>"target" .. "oftarget"</code> 
+- <code>"party" .. i</code>
+- <code>"party3focus"</code>
+- ...</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

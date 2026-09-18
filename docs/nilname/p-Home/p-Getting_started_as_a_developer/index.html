@@ -1,0 +1,206 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/Home/Getting_started_as_a_developer/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="my-first-nilname-script">My first NilName script</h1>
+<p>First, you will need to create a lua file, name it <code>_test.lua</code> and place it in the <code>/scripts/</code> folder. This will make <code>_test.lua</code> auto-start when entering the in-game world <em>(or after <code>/reload</code>)</em>.</p>
+<p>In this file you start with something like this:</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">nn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+
+<span class="c1">-- now you can invoke nn funcs, like</span>
+<span class="nv">nn</span><span class="p">.</span><span class="nf">ClickToMove</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- and u move to XYZ 0,0,0</span>
+</code></pre></div>
+<h2 id="object-manager">Object Manager</h2>
+<p>The fun starts when using the object manager that NilName provides, you can use it as follows:</p>
+<div class="language-lua highlight"><pre id="__code_1"><span></span><code tabindex="0"><span class="kd">local</span><span class="w"> </span><span class="nv">nn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Objects</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">os</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">[</span><span class="nv">i</span><span class="p">]</span>
+
+<span class="w">    </span><span class="c1">-- This prints the Nn object hash/id, which is specific to Nn</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">o</span><span class="p">)</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">-- This function is unique to Nn and is used to obtain the Type of a given Nn object</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nf">ObjectType</span><span class="p">(</span><span class="nv">o</span><span class="p">))</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">-- A Wow function which is compatibility with Nn Objects (because this script is loaded by Nn)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nf">UnitName</span><span class="p">(</span><span class="nv">o</span><span class="p">))</span><span class="w"> </span>
+<span class="kr">end</span>
+</code></pre></div>
+<p>Each Nn object obtained from <code>Objects()</code> is located inside the game world. In the open world, this means all objects in a radius of 100y of the player. There might be some exceptions when located in small instances (like dungeons or battlegrounds) where all objects can be obtained. This may not include any types of the 'stealth' objects (players) that are hostile to one another.</p>
+<p>Each 'object' can be on the following types, represented with the respective identifier:</p>
+<div class="language-c highlight"><pre id="__code_2"><span></span><code><span class="k">enum</span><span class="w"> </span><span class="n">GObjectType</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AzeriteEmpoweredItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AzeriteItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ActivePlayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">    </span><span class="n">GameObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DynamicObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Corpse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AreaTrigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SceneObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Conversation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><em>NOTE: these might change between expansions and/or product version</em></p>
+<p>A full list of APIs related to the objects can be found at <a href="../../API/Objects/">API/Objects</a>, please note that some functions may not work with certain object types (e.g. <code>UnitName</code> and <code>ObjectName</code>) and that some existing Wow APIs may or may not work with Nn objects.</p>
+<h3 id="fishing-bot-example">Fishing bot example</h3>
+<p>A very basic example of using the Nn Object Manager to automate fishing would look like this:</p>
+<div class="language-lua highlight"><pre id="__code_3"><span></span><code tabindex="0"><span class="kd">local</span><span class="w"> </span><span class="nv">Nn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+
+<span class="c1">-- Obtain the Nn Object hash/id of our own player</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Object</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span>
+
+
+<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">tickfish</span><span class="p">()</span>
+
+<span class="w">    </span><span class="c1">-- Cast fishing if not already?</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nf">UnitChannelInfo</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="c1">-- call our Unlock function so we can call the protected CastSpellByName Wow API</span>
+<span class="w">        </span><span class="nf">Unlock</span><span class="p">(</span><span class="nv">CastSpellByName</span><span class="p">,</span><span class="w"> </span><span class="s2">"Fishing"</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Casted fishing!"</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="c1">-- Obtain all Objects in the current frame</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Objects</span><span class="p">()</span>
+
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">os</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">[</span><span class="nv">i</span><span class="p">]</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nf">ObjectType</span><span class="p">(</span><span class="nv">o</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="c1">-- Filter all GameObjects</span>
+<span class="w">            </span><span class="kd">local</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectName</span><span class="p">(</span><span class="nv">o</span><span class="p">)</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Fishing Bobber"</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">                </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Found someones bobber at "</span><span class="p">,</span><span class="w"> </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="nv">o</span><span class="p">))</span><span class="w"> </span><span class="c1">-- lets print the XYZ for fun!</span>
+<span class="w">                </span><span class="c1">-- it is a fishing Bobber, lets verify it is ours?</span>
+<span class="w">                </span><span class="kr">if</span><span class="w"> </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">ObjectCreator</span><span class="p">(</span><span class="nv">o</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">                    </span><span class="c1">-- cool, now check if the animation flag is set to 1, which indicates the 'splash'</span>
+<span class="w">                    </span><span class="kr">if</span><span class="w"> </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">GetObjectField</span><span class="p">(</span><span class="nv">o</span><span class="p">,</span><span class="w"> </span><span class="mh">0xD6</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="c1">-- NOTE: the 0xD6 offset depends on the game version!</span>
+<span class="w">                        </span><span class="c1">-- yay, we have bait, lets loot it!</span>
+<span class="w">                        </span><span class="nf">ObjectInteract</span><span class="p">(</span><span class="nv">o</span><span class="p">)</span><span class="w"> </span><span class="c1">-- This will interact and open the loot window!</span>
+<span class="w">                    </span><span class="kr">end</span>
+<span class="w">                </span><span class="kr">end</span>
+<span class="w">            </span><span class="kr">end</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="c1">-- call this function again in 0.2 seconds</span>
+<span class="w">    </span><span class="nv">C_Timer</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nv">tickfish</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- start the ticker</span>
+<span class="nf">tickfish</span><span class="p">()</span>
+</code></pre></div>
+<p>Function <code>tickfish</code> defines all the steps to find a valid bobber object and interect with it when needed. <em>(assuming that the offset <code>0xD6</code> is correct for 'object animation flag')</em></p>
+<p>We can further extend this script to auto-equip a fishing pole, apply any lures if needed, and so on. However, these actions are unrelated to the Nn APIs and are left as an exercise for the reader :).</p>
+<h2 id="movement-example">Movement Example</h2>
+<p>Standing still near a body of water is all fun and games until you reach that level 75 fishing cap, or until your inventory is full. It's time to stretch our legs and move our player to a nearby NPC to train and/or vendor the trash we've collected.</p>
+<p>Unfortunately, the Nn object manager has a 100 yard range limit, so we cannot obtain their world coordinates if we are not within the required object manager range. Luckily for us, most NPCs are located at fixed locations. This means we can obtain world coordinates from NPCs and hardcode them into our script.</p>
+<p>To get started, I am located at the docks at Teldrassil, and the following two NPCs are of interest:</p>
+<div class="language-lua highlight"><pre id="__code_4"><span></span><code tabindex="0"><span class="nv">Nessa</span><span class="w"> </span><span class="nf">Shadowsong</span><span class="w"> </span><span class="p">(</span><span class="nv">Fishing</span><span class="w"> </span><span class="nv">Supplies</span><span class="p">)</span>
+<span class="nv">X</span><span class="p">:</span><span class="w"> </span><span class="err">8695</span><span class="p">.</span><span class="err">224509</span>
+<span class="py">Y</span><span class="p">:</span><span class="w">  </span><span class="err">952</span><span class="p">.</span><span class="err">272949</span>
+<span class="py">Z</span><span class="p">:</span><span class="w">   </span><span class="err">12</span><span class="p">.</span><span class="err">670760</span>
+
+<span class="py">Androl</span><span class="w"> </span><span class="nf">Oakhand</span><span class="w"> </span><span class="p">(</span><span class="nv">Fisherman</span><span class="p">)</span>
+<span class="nv">X</span><span class="p">:</span><span class="w"> </span><span class="err">8657</span><span class="p">.</span><span class="err">604492</span>
+<span class="py">Y</span><span class="p">:</span><span class="w">  </span><span class="err">960</span><span class="p">.</span><span class="err">567687</span>
+<span class="py">Z</span><span class="p">:</span><span class="w">    </span><span class="err">1</span><span class="p">.</span><span class="err">984236</span>
+
+<span class="c1">-- These were obtained by running `/dump ObjectPosition("target")` in-game while having a target</span>
+</code></pre></div>
+<p>I want to say Hi to Nessa and show her my junk, I do this with the following script:</p>
+<div class="language-lua highlight"><pre id="__code_5"><span></span><code tabindex="0"><span class="kd">local</span><span class="w"> </span><span class="nv">Nn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+
+<span class="c1">-- Nessa's location</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8695.224509</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">ty</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">952.272949</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">tz</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="mf">12.670760</span>
+
+<span class="c1">-- Our player location</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="w"> </span><span class="nv">py</span><span class="p">,</span><span class="w"> </span><span class="nv">pz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span>
+
+<span class="c1">-- Obtain the map we are in (the instance/dungeon/raid or continent we are in)</span>
+<span class="c1">-- NOTE: This will not work on transport objects like tram, boat, zeppelin, etc..</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">mapId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GetInstanceInfo</span><span class="p">()</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">GenerateLocalPath</span><span class="p">(</span><span class="nv">mapId</span><span class="p">,</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="w"> </span><span class="nv">py</span><span class="p">,</span><span class="w"> </span><span class="nv">pz</span><span class="p">,</span><span class="w"> </span><span class="nv">tx</span><span class="p">,</span><span class="w"> </span><span class="nv">ty</span><span class="p">,</span><span class="w"> </span><span class="nv">tz</span><span class="p">)</span>
+
+<span class="c1">-- lets make sure the path is not empty (this may happen if NnNav is not running, or no mesh/path was found)</span>
+<span class="kr">if</span><span class="w"> </span><span class="o">#</span><span class="nv">path</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="c1">-- valid, lets navigate it!</span>
+
+<span class="w">    </span><span class="c1">-- keep a state of things</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">pathIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">-- we are located at point 1, so start with 2</span>
+
+<span class="w">    </span><span class="c1">-- asked ChatGPT to make me this, I failed math in high school</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">distance3D</span><span class="p">(</span><span class="nv">x1</span><span class="p">,</span><span class="w"> </span><span class="nv">y1</span><span class="p">,</span><span class="w"> </span><span class="nv">z1</span><span class="p">,</span><span class="w"> </span><span class="nv">x2</span><span class="p">,</span><span class="w"> </span><span class="nv">y2</span><span class="p">,</span><span class="w"> </span><span class="nv">z2</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">x1</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">y1</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">dz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">z2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">z1</span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="nb">math.sqrt</span><span class="p">(</span><span class="nv">dx</span><span class="o">*</span><span class="nv">dx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">dy</span><span class="o">*</span><span class="nv">dy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">dz</span><span class="o">*</span><span class="nv">dz</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="c1">-- make a tick function we can keep invoking after every X time while the player walks</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">tickwalk</span><span class="p">()</span>
+<span class="w">        </span><span class="c1">-- check if destination was reached?</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="w"> </span><span class="nv">py</span><span class="p">,</span><span class="w"> </span><span class="nv">pz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">x</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">ty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">y</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">z</span><span class="p">)</span>
+
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">distance3D</span><span class="p">(</span><span class="nv">px</span><span class="p">,</span><span class="w"> </span><span class="nv">py</span><span class="p">,</span><span class="w"> </span><span class="nv">pz</span><span class="p">,</span><span class="w"> </span><span class="nv">tx</span><span class="p">,</span><span class="w"> </span><span class="nv">ty</span><span class="p">,</span><span class="w"> </span><span class="nv">tz</span><span class="p">)</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.95</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="c1">-- make sure its not the end?</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="nv">pathIndex</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="o">#</span><span class="nv">path</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">                </span><span class="nb">print</span><span class="p">(</span><span class="s2">"We have arrived! say hello to Nessa &lt;3"</span><span class="p">)</span>
+<span class="w">                </span><span class="kr">return</span>
+<span class="w">            </span><span class="kr">end</span>
+
+<span class="w">            </span><span class="c1">-- set the next point!</span>
+<span class="w">            </span><span class="nv">pathIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">pathIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="nv">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">x</span><span class="p">)</span>
+<span class="w">            </span><span class="nv">ty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">y</span><span class="p">)</span>
+<span class="w">            </span><span class="nv">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">z</span><span class="p">)</span>
+
+<span class="w">            </span><span class="c1">-- start moving to it</span>
+<span class="w">            </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">ClickToMove</span><span class="p">(</span><span class="nv">tx</span><span class="p">,</span><span class="w"> </span><span class="nv">ty</span><span class="p">,</span><span class="w"> </span><span class="nv">tz</span><span class="p">)</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Moving to"</span><span class="p">,</span><span class="w"> </span><span class="nv">tx</span><span class="p">,</span><span class="w"> </span><span class="nv">ty</span><span class="p">,</span><span class="w"> </span><span class="nv">tz</span><span class="p">)</span>
+<span class="w">        </span><span class="kr">end</span>
+
+<span class="w">        </span><span class="c1">-- check again in 0.2 seconds</span>
+<span class="w">        </span><span class="nv">C_Timer</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nv">tickwalk</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="c1">-- make sure its numerical, then click on first point</span>
+<span class="w">    </span><span class="nv">Nn</span><span class="p">.</span><span class="nf">ClickToMove</span><span class="p">(</span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">x</span><span class="p">),</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">y</span><span class="p">),</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">z</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Moving to"</span><span class="p">,</span><span class="w"> </span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">path</span><span class="p">[</span><span class="nv">pathIndex</span><span class="p">].</span><span class="nv">z</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">tickwalk</span><span class="p">()</span>
+<span class="kr">end</span>
+</code></pre></div>
+<p>This will make us walk to Nessa where we can vendor our junk. Once again, handeling the player inventory is left as an exercise for the reader.</p>
+<h2 id="what-is-next">What is next?</h2>
+<p>Automated all the things? lovely, time to share it with friends :3</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

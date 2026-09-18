@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Movement/SendMovementHeartbeat/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sendmovementheartbeat">SendMovementHeartbeat</h1>
+<p>Sends a movement heartbeat update.</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nf">SendMovementHeartbeat</span><span class="p">()</span>
+</code></pre></div>
+<hr>
+<h2 id="details">Details</h2>
+<p>This may be used to sync your client with the server.</p>
+<p>For example, when calling <a href="../SetPlayerFacing/"><code>SetPlayerFacing</code></a> it is only updated client-side, and will only be 'truely' updated when calling <a href="#"><code>SendMovementHeartbeat</code></a>.</p>
+<p>Without updating server-side, you may have issues casting Blink or facing NPCs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

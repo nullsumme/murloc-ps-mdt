@@ -1,0 +1,94 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/REST_API/readme/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rest-api">Rest API</h1>
+<p>Endpoint: <code>nilname.com/api/</code></p>
+<p>Authentication is done with header <code>api-key</code></p>
+<p>Return value model:</p>
+<div class="language-json highlight"><pre id="__code_0"><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some error message if not null"</span><span class="p">,</span><span class="w"> </span><span class="c1">// ignore if null</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Objec</span><span class="kc">t</span><span class="p">]</span><span class="w"> </span><span class="c1">// differs on each API return</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="get-balance">Get Balance</h2>
+<div class="language-text highlight"><pre id="__code_1"><span></span><code>GET /api/balance
+</code></pre></div>
+<p>Returns the amount of balance on the account.</p>
+<p>Example:</p>
+<div class="language-json highlight"><pre id="__code_2"><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">420.69</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="get-licenses">Get Licenses</h2>
+<div class="language-text highlight"><pre id="__code_3"><span></span><code>GET /api/license/list
+</code></pre></div>
+<p>Returns all license keys on the account.</p>
+<p>Example:</p>
+<div class="language-json highlight"><pre id="__code_4"><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"durationDays"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NBRi2EA56789O123469"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"advanced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"maxSessions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"isExpired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"isUsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="err">...</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="create-licenses">Create Licenses</h2>
+<div class="language-text highlight"><pre id="__code_5"><span></span><code>POST /api/license/create
+</code></pre></div>
+<p>Creates a new license as requested, you can visit the website to get a visual </p>
+<p>Example request body:</p>
+<div class="language-json highlight"><pre id="__code_6"><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"sessions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Example return:</p>
+<div class="language-json highlight"><pre id="__code_7"><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nt">"newKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"NBRi2EA56789O123469"</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="encrypt-scriptsnn">Encrypt Scripts.nn</h2>
+<div class="language-text highlight"><pre id="__code_8"><span></span><code>POST /api/encrypt
+</code></pre></div>
+<p>Upload a Lua script which will get encrypted into a <code>.nn</code> script. You can then load this script by storing it in <code>/scripts/_autoload.nn</code> where the <code>_</code> makes it auto load.</p>
+<p>Alternatively, you may store it in <code>/scripts/test.nn</code> so you can use the in-game command <code>/nn load test</code> to load the <code>test.nn</code> script.</p>
+<p>Example request body:</p>
+<div class="language-text highlight"><pre id="__code_9"><span></span><code>print("this is a secret lua script")
+</code></pre></div>
+<p>Example return:</p>
+<div class="language-json highlight"><pre id="__code_10"><span></span><code><span class="err">?LuaQ??u????l????w????</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

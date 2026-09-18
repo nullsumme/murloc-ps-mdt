@@ -1,0 +1,88 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Movement/GenerateLocalPath/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="generatelocalpath">GenerateLocalPath</h1>
+<p>Request a path table from the nilname local server. Requires that <strong>you must run NnNav.exe</strong> and have the mmaps folder with the needed map files. No callback is required. </p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nv">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GenerateLocalPath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="w"> </span><span class="nv">x1</span><span class="p">,</span><span class="w"> </span><span class="nv">y1</span><span class="p">,</span><span class="w"> </span><span class="nv">z1</span><span class="p">,</span><span class="w"> </span><span class="nv">x2</span><span class="p">,</span><span class="w"> </span><span class="nv">y2</span><span class="p">,</span><span class="w"> </span><span class="nv">z2</span><span class="p">,</span><span class="w"> </span><span class="nv">errorCallback</span><span class="p">,</span><span class="w"> </span><span class="nv">smooth</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>map</strong><ul>
+<li><code>number</code> : map instanceId <em>(e.g. <code>select(8,GetInstanceInfo())</code>)</em></li>
+</ul>
+</li>
+<li><strong>x1</strong><ul>
+<li><code>number</code> : start X world coord</li>
+</ul>
+</li>
+<li><strong>y1</strong><ul>
+<li><code>number</code> : start Y world coord</li>
+</ul>
+</li>
+<li><strong>z1</strong><ul>
+<li><code>number</code> : start Z world coord</li>
+</ul>
+</li>
+<li><strong>x2</strong><ul>
+<li><code>number</code> : end X world coord</li>
+</ul>
+</li>
+<li><strong>y2</strong><ul>
+<li><code>number</code> : end Y world coord</li>
+</ul>
+</li>
+<li><strong>z2</strong><ul>
+<li><code>number</code> : end Z world coord</li>
+</ul>
+</li>
+<li><strong>errorCallback</strong><ul>
+<li><code>function</code> : callback when request failed</li>
+</ul>
+</li>
+<li><strong>smooth</strong><ul>
+<li><code>boolean</code> : u like it rough nah?</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="details">Details</h2>
+<p>Doing long distances will give less accurate pathing as the path is smoothened a bit. This rounding can accumulate on big paths and we therefore recommend performing intermediate pathing while navigating to a far away location.</p>
+<ul>
+<li><code>errorCallback</code> will be called if you somehow fail to connect to the server</li>
+</ul>
+<div class="language-lua highlight"><pre id="__code_1"><span></span><code tabindex="0"><span class="kd">local</span><span class="w"> </span><span class="nv">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">select</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nf">GetInstanceInfo</span><span class="p">())</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="s1">'player'</span><span class="p">)</span><span class="w"> </span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="s1">'target'</span><span class="p">)</span><span class="w"> </span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GenerateLocalPath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="p">,</span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="p">)</span><span class="w"> </span><span class="c1">-- raw path</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GenerateLocalPath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="p">,</span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="p">,</span><span class="kr">function</span><span class="p">()</span>
+<span class="w">    </span><span class="c1">-- handle error connecting to NnNav Server</span>
+<span class="kr">end</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GenerateLocalPath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="p">,</span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="p">,</span><span class="kc">nil</span><span class="p">,</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="c1">-- smoothened path</span>
+
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">px</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">py</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">pz</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Distance</span><span class="p">(</span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="p">,</span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">x</span><span class="p">,</span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">y</span><span class="p">,</span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">z</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nf">format</span><span class="p">(</span><span class="s1">'returned path start position differs from that of player by %.3f yds'</span><span class="p">,</span><span class="nv">diff</span><span class="p">))</span>
+<span class="kr">end</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

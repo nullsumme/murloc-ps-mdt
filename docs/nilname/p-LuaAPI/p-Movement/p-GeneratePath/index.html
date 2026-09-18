@@ -1,0 +1,87 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Movement/GeneratePath/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="generatepath">GeneratePath</h1>
+<p>Request a path table without using local MMAP files. This requires a callback in order to process the remote request for the pathing server.</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nf">GeneratePath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="nv">x1</span><span class="p">,</span><span class="nv">y1</span><span class="p">,</span><span class="nv">z1</span><span class="p">,</span><span class="nv">x2</span><span class="p">,</span><span class="nv">y2</span><span class="p">,</span><span class="nv">z2</span><span class="p">,</span><span class="w"> </span><span class="nv">callback</span><span class="p">,</span><span class="w"> </span><span class="nv">smooth</span><span class="p">,</span><span class="w"> </span><span class="nv">errorCallback</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>map</strong><ul>
+<li><code>number</code> : map instanceId <em>(e.g. <code>select(8,GetInstanceInfo())</code>)</em></li>
+</ul>
+</li>
+<li><strong>x1</strong><ul>
+<li><code>number</code> : start X world coord</li>
+</ul>
+</li>
+<li><strong>y1</strong><ul>
+<li><code>number</code> : start Y world coord</li>
+</ul>
+</li>
+<li><strong>z1</strong><ul>
+<li><code>number</code> : start Z world coord</li>
+</ul>
+</li>
+<li><strong>x2</strong><ul>
+<li><code>number</code> : end X world coord</li>
+</ul>
+</li>
+<li><strong>y2</strong><ul>
+<li><code>number</code> : end Y world coord</li>
+</ul>
+</li>
+<li><strong>z2</strong><ul>
+<li><code>number</code> : end Z world coord</li>
+</ul>
+</li>
+<li><strong>callback</strong><ul>
+<li><code>function</code> : callback when request is finished</li>
+</ul>
+</li>
+<li><strong>smooth</strong><ul>
+<li><code>boolean</code> : u like it rough nah?</li>
+</ul>
+</li>
+<li><strong>errorCallback</strong><ul>
+<li><code>function</code> : callback for when the request failed</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="details">Details</h2>
+<p>Doing long distances will give less accurate pathing as the path is smoothened a bit. This rounding can accumulate on big paths and we therefore recommend performing intermediate pathing while navigating to a far away location.</p>
+<div class="language-lua highlight"><pre id="__code_1"><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPostion</span><span class="p">(</span><span class="s1">'target'</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ObjectPosition</span><span class="p">(</span><span class="s1">'player'</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">select</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nf">GetInstanceInfo</span><span class="p">())</span>
+
+<span class="nv">navCallBack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">path</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'points on the received path'</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">path</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">DevTools_Dump</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="c1">-- output is {x = 1, y = 2, z = 3}</span>
+<span class="w">    </span><span class="nf">DevTools_Dump</span><span class="p">(</span><span class="nv">path</span><span class="p">[</span><span class="o">#</span><span class="nv">path</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+<span class="kr">end</span>
+
+<span class="nf">GeneratePath</span><span class="p">(</span><span class="nv">map</span><span class="p">,</span><span class="w"> </span><span class="nv">px</span><span class="p">,</span><span class="nv">py</span><span class="p">,</span><span class="nv">pz</span><span class="p">,</span><span class="nv">x</span><span class="p">,</span><span class="nv">y</span><span class="p">,</span><span class="nv">z</span><span class="p">,</span><span class="nv">navCallBack</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>

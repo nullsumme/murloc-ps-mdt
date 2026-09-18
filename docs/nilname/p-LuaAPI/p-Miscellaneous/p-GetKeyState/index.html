@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="https://docs.nilname.com/LuaAPI/Miscellaneous/GetKeyState/">
+<article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="getkeystate">GetKeyState</h1>
+<p>Returns keyboard pressed key info.</p>
+<div class="language-lua highlight"><pre id="__code_0"><span></span><code><span class="nv">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">GetKeyState</span><span class="p">(</span><span class="nv">virtKey</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>virtKey</strong><ul>
+<li><code>number</code> : virtual key <em>(there is a list below)</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="returns">Returns</h2>
+<ul>
+<li><strong>flag</strong><ul>
+<li><code>number</code> : falgs</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="details">Details</h2>
+<p>The <code>flags</code> return value specifies the status of the specified virtual key, as follows:
+- If the high-order bit is 1, the key is down; otherwise, it is up.
+- If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0. A toggle key's indicator light (if any) on the keyboard will be on when the key is toggled, and off when the key is untoggled.</p>
+<hr>
+<p>Enjoy this <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">virtual key codes list</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
